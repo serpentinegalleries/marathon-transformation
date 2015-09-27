@@ -26,6 +26,37 @@
 
 
 */
+@font-face {
+  font-family: 'GT-Walsheim-Bold';
+  src: url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'GT-Walsheim-Bold-Oblique';
+  src: url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold-Oblique.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/GT-Walsheim-Bold-Oblique-Web/GT-Walsheim-Bold-Oblique.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'GT-Walsheim-Thin';
+  src: url('/wp-content/themes/transformation/media/fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin.eot'); /* IE9 Compat Modes */
+  src: url('/wp-content/themes/transformation/media/fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/wp-content/themes/transformation/media/fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/wp-content/themes/transformation/media/fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'GT-Walsheim-Thin-Oblique';
+  src: url('../fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin-Oblique.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/GT-Walsheim-Thin-Oblique-Web/GT-Walsheim-Thin-Oblique.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 /* WORDPRESS */
 .alignleft,
 .alignright{
@@ -94,7 +125,48 @@ code {
             border-radius: 2px;
 }
 code {
-    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-family: Consolas,"Lisberation Mono",Courier,monospace;
     font-weight: 400;
     color: #333;
+}
+
+/* Custom */
+
+.mythemes-topper {
+    background: transparent !important;
+}
+header hgroup a {
+    color: #FFF !important;
+}
+header hgroup a:hover {
+    color: #FFF !important;
+}
+/*header hgroup h1, header hgroup h1 > a, header hgroup > a {
+    color: #FFF !important;
+}*/
+
+nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
+    color: #FFF !important;
+    background: transparent !important;
+    text-transform: capitalize !important;
+}
+
+.mythemes-copyright {
+    background: #000 !important;
+    padding: 20px !important;
+}
+
+footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
+    background: transparent !important;
+    color: #FFF !important;
+
+}
+
+.container {
+    width: 75% !important;
+}
+
+p {
+    font-family: 'GT-Walsheim-Thin';
+    font-size: 18px;
 }

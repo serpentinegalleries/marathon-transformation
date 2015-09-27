@@ -1,10 +1,13 @@
+
+
+
 *{
 	font-style:normal;
 	font-variant:normal;
-	font-weight:normal;	
-}
+	font-weight:normal;
+} 
 body,html{
-	font-family: "Noto Sans", sans-serif, Arial, serif;
+	font-family: Sans-serif, Arial, serif !important;
 	font-size: 13px;
 	line-height: 18px;
 
@@ -12,6 +15,7 @@ body,html{
 	font-variant:normal;
 	font-weight:normal;
 }
+
 a{
 	-webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
@@ -111,6 +115,17 @@ article blockquote p:first-child{
 }
 article blockquote p:last-child{
     margin-bottom: 0px;
+}
+article p {
+    p {
+        font-family: "GT-Walsheim-Thin", sans-serif, Arial, serif !important;
+        font-size: 13px;
+        line-height: 18px;
+
+        font-style:normal;
+        font-variant:normal;
+        font-weight:normal;    
+    }    
 }
 
 
