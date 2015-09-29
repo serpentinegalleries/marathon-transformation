@@ -1,6 +1,6 @@
 
 
-
+/*
 *{
 	font-style:normal;
 	font-variant:normal;
@@ -8,8 +8,8 @@
 } 
 body,html{
 	font-family: Sans-serif, Arial, serif !important;
-	font-size: 13px;
-	line-height: 18px;
+	//font-size: 13px;
+	//line-height: 18px;
 
 	font-style:normal;
 	font-variant:normal;
@@ -91,7 +91,7 @@ article h6{
     margin-bottom: 15px;
 }
 
-/* BLOCKQUOTE */
+/* BLOCKQUOTE */ /*
 .content-border article blockquote p,
 .content-border article blockquote,
 article blockquote p,
@@ -117,25 +117,22 @@ article blockquote p:last-child{
     margin-bottom: 0px;
 }
 article p {
-    p {
-        font-family: "GT-Walsheim-Thin", sans-serif, Arial, serif !important;
-        font-size: 13px;
-        line-height: 18px;
+    font-size: 13px;
+    line-height: 18px;
 
-        font-style:normal;
-        font-variant:normal;
-        font-weight:normal;    
-    }    
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;    
 }
 
 
-/* LISTS */
+/* LISTS 
 article ul,
 article ol{
     padding-left: 25px;
 }
 
-/* TABLE */
+/* TABLE 
 table{
     width: 100%;
     color: #666666;
@@ -171,7 +168,7 @@ pre{
        -moz-hyphens: auto;
             hyphens: auto;
 }
-
+*/
 
 /**************
 CUSTOM
@@ -224,16 +221,15 @@ CUSTOM
 }
 
  
-body, html, p {
+body, html {
     font-family: 'gt_walsheimthin', Arial, serif !important;
-    font-size: 18px;
 
     font-style:normal;
     font-variant:normal;
     font-weight:normal;
 }
 
-a{
+a {
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
@@ -241,6 +237,7 @@ a{
     transition: all 0.3s linear;
 }
 a:hover{
+	color: #969696;
     text-decoration: none;
 }
 
@@ -253,8 +250,8 @@ h1,h2,h3,h4,h5,h6{
 
 h1.post-title{
     color: #303030;
-    font-size: 23px;
-    line-height: 26px;
+    font-size: 58px;
+    //line-height: 26px;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -262,7 +259,6 @@ h1.post-title.no-thumbnail{
     margin-top: 0px;
     margin-bottom: 30px;
 }
-
 
 article h1,
 article h2,
@@ -334,15 +330,13 @@ article blockquote p:last-child{
     margin-bottom: 0px;
 }
 article p {
-    p {
-        font-family: "GT-Walsheim-Thin", sans-serif, Arial, serif !important;
-        font-size: 18px;
-        // line-height: 18px;
+        font-family: "gt_walsheimthin", sans-serif, Arial, serif !important;
+        font-size: 36px;
+        line-height: 40px;
 
         font-style:normal;
         font-variant:normal;
         font-weight:normal;    
-    }    
 }
 
 

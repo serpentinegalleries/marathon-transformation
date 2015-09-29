@@ -20,7 +20,6 @@
 */
 
 
-
 @font-face {
     font-family: 'gt_walsheimthin';
     src: url('/wp-content/themes/transformation/media/fonts/GT-Walsheim/gt-walsheim-thin-webfont.eot');
@@ -174,9 +173,4 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
 
 .container {
     width: 75% !important;
-}
-
-body, html, p {
-    font-family: 'gt_walsheimthin' !important;
-    font-size: 18px;
 }
