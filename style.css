@@ -170,7 +170,44 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
     color: #FFF !important;
 
 }
+.content {
+    padding: 0 !important;
+}
+.content .container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.content .container .col-lg-12 {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
-.container {
-    width: 75% !important;
+.content article .container section .container {
+    width: 70% !important;
+    display: block !important;
+    margin: auto !important;
+}
+
+.front-page-section-highlight p {
+    color: #FFF !important;
+}
+.front-page-section-highlight h1, .front-page-section-highlight h4 {
+    color: #FFF !important;
+}
+
+.textwidget {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    padding: 75px 0;
+    text-align: center;
+}
+.textwidget h1 {
+    margin-top: 25px;
+    font-size: 54px;
+}
+.textwidget h4 {
+    font-size: 24px;
 }

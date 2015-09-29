@@ -60,6 +60,7 @@
                     /* LEFT SIDEBAR */
                     $myThemes_layout -> echoSidebar( 'left' );
             ?>
+            </div>
                     <!-- CONTENT -->
                     <section class="<?php echo $myThemes_layout -> contentClass(); ?>">
                     <?php
@@ -74,7 +75,6 @@
                         ) );
                     ?>
                         <article>
-
                         <?php
 
                             if( count( $wp_query -> posts ) ){
@@ -108,7 +108,7 @@
                                 }
                             }
                         ?>
-                        <article>
+                        </article>
 
                     <?php
                         /* RIGHT WRAPPER */
