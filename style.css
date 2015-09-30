@@ -148,7 +148,8 @@ header hgroup a {
     font-family: 'gt_walsheimbold' !important;
 }
 header hgroup a:hover {
-    color: #FFF !important;
+    color: #969696 !important;
+    text-decoration: none !important;
 }
 /*header hgroup h1, header hgroup h1 > a, header hgroup > a {
     color: #FFF !important;
@@ -158,6 +159,10 @@ nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
     color: #FFF !important;
     background: transparent !important;
     text-transform: capitalize !important;
+}
+nav.base-nav ul li:hover > a {
+    color: #969696 !important;
+    text-decoration: none !important;
 }
 
 .mythemes-copyright {
@@ -206,8 +211,9 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
 }
 .textwidget h1 {
     margin-top: 25px;
-    font-size: 54px;
+    font-size: 46px;
+    margin-top: 10px;
 }
 .textwidget h4 {
-    font-size: 24px;
+    font-size: 16px;
 }
