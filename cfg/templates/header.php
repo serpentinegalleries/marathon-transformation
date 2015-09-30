@@ -23,11 +23,10 @@
         <div class="valign-cell">
             
                 <div class="row">
-                    <div id="player" class="col-lg-6">
+                    <div id="videoPlayer" class="col-lg-6">
                         Hello
                     </div>
-                    <div class="col-lg-6">
-                        Hello
+                    <div id="radioPlayer" class="col-lg-6">
                     </div>
 
 
@@ -81,65 +80,87 @@
     </div>
 </div>
 
-    <script type="text/javascript">
+    <script>
 
-        var w = 960,
-            h = 500,
-            x = d3.scale.ordinal().domain(d3.range(3)).rangePoints([0, w], 2);
+        var width = 300,
+            height = 300,
+            τ = 2 * Math.PI;
 
-        var fields = [
-          {name: "hours", value: 0, size: 24},
-          {name: "minutes", value: 0, size: 60},
-          {name: "seconds", value: 0, size: 60}
-        ];
+        var dateVar = new Date();
+        var minVar = dateVar.getMinutes();
+        var hourVar = (((dateVar.getUTCHours() + 1) * 60) + minVar) / 1440;
+        var halfdayVar = (((dateVar.getUTCHours() + 1) * 60) + minVar - 720) / 1440;
 
         var arc = d3.svg.arc()
-            .innerRadius(130)
-            .outerRadius(140)
-            .startAngle(0)
-            .endAngle(function(d) { return (d.value / d.size) * 2 * Math.PI; });
+            .innerRadius(140)
+            .outerRadius(130)
+            .startAngle(0);
 
-        var svg = d3.select("#player").append("svg:svg")
-            .attr("width", w)
-            .attr("height", h)
-          .append("svg:g")
-            .attr("transform", "translate(0," + (h / 2) + ")");
+        // Video player
+        var video = d3.select("#videoPlayer").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+
+        // Add the background arc, from 0 to 100% (τ).
+        var background = video.append("path")
+            .datum({endAngle: τ})
+            .style("fill", "#969696")
+            .attr("d", arc);
+
+        // Add the foreground arc
+        var videoForeground = video.append("path")
+            .datum({endAngle: hourVar * τ})
+            .style("fill", "#4696ff")
+            .attr("d", arc);
+
+        // Use transition.call
+        // (identical to selection.call) so that we can encapsulate the logic for
+        // tweening the arc in a separate function below.
+        setInterval(function() {
+          videoForeground.transition()
+              .duration(100)
+              .call(arcTween, hourVar * τ);
+        }, 1500);
+
+        // Radio Player
+        var radio = d3.select("#radioPlayer").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+
+        var background = radio.append("path")
+            .datum({endAngle: τ})
+            .style("fill", "#969696")
+            .attr("d", arc);
+
+        var radioForeground = radio.append("path")
+            .datum({endAngle: .127 * τ})
+            .style("fill", "#4696ff") 
+            .attr("d", arc);
 
         setInterval(function() {
-          var now = new Date();
+          radioForeground.transition()
+              .duration(d3.time.minute)
+              .call(arcTween, halfdayVar * τ);
+        }, 1500);
 
-          fields[0].previous = fields[0].value; fields[0].value = now.getHours();
-          fields[1].previous = fields[1].value; fields[1].value = now.getMinutes();
-          fields[2].previous = fields[2].value; fields[2].value = now.getSeconds();
 
-          var path = svg.selectAll("path")
-              .data(fields.filter(function(d) { return d.value; }), function(d) { return d.name; });
+        function arcTween(transition, newAngle) {
 
-          path.enter().append("svg:path")
-              .attr("transform", function(d, i) { return "translate(" + x(i) + ",0)"; })
-            .transition()
-              .ease("elastic")
-              .duration(750)
-              .attrTween("d", arcTween);
+          transition.attrTween("d", function(d) {
 
-          path.transition()
-              .ease("elastic")
-              .duration(750)
-              .attrTween("d", arcTween);
+            var interpolate = d3.interpolate(d.endAngle, newAngle);
 
-          path.exit().transition()
-              .ease("bounce")
-              .duration(750)
-              .attrTween("d", arcTween)
-              .remove();
+            return function(t) {
 
-        }, 1000);
+              d.endAngle = interpolate(t);
 
-        function arcTween(b) {
-          var i = d3.interpolate({value: b.previous}, b);
-          return function(t) {
-            return arc(i(t));
-          };
+              return arc(d);
+            };
+          });
         }
 
     </script>
