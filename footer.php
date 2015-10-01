@@ -39,6 +39,12 @@
             <div class="mythemes-copyright">
                 <div class="container">
                     <div class="row">
+                        <img class="footer-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
+                    </div>
+                    <div class="row">
+                        <img class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.png">
+                    </div>
+                    <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-6">
                         </div>
                         <?php
@@ -69,8 +75,8 @@
                             $rdio       = myThemes::get( 'rdio' );
                             $rss        = myThemes::get( 'rss' );
                         ?>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="mythemes-social">
+                        <!--<div class="col-sm-6 col-md-6 col-lg-6">-->
+                            <div class="mythemes-social pull-right">
                                 <?php
                                     if( !empty( $github ) ){
                                         echo '<a href="' . $github . '" class="icon-github" target="_blank"></a>';
@@ -177,7 +183,7 @@
                                     }
                                 ?>
                             </div>
-                        </div>
+                        <!--</div>-->
                     </div>
                 </div>
             </div>
