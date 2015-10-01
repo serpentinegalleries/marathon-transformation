@@ -294,3 +294,25 @@ Weather Icons
     margin-top: 12px !important;
     min-height: 50px;
 }
+
+/* Participants */
+.participants-list p,
+.participants-list h1,
+.participants-list h2,
+.participants-list h3,
+.participants-list h4,
+.participants-list h5,
+.participants-list h6
+ {
+    text-align: left !important;
+}
+
+hr {
+    border-top: 1px solid #000 !important;
+  width: 200%;
+  margin-left: -50%;
+}
+/* Hack to have HR not extend past screen */
+body {
+    overflow-x: hidden;
+}
