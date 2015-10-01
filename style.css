@@ -142,12 +142,12 @@ code {
     background: transparent !important;
 }
 .mythemes-topper .container {
-    margin: 0;
-    width: 100%;
+    width: 95%;
+    display: block;
+    margin: 0 auto;
 }
 header hgroup {
     text-align: left !important;
-    padding-left: 15px !important; // Quick fix - CHANGE THIS!!!
 }
 header hgroup a {
     color: #FFF !important;
