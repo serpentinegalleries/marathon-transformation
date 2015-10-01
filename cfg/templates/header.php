@@ -1,15 +1,4 @@
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.2"></script>
-    <style type="text/css">
-
-        path {
-          fill-rule: evenodd;
-          fill: #969696;
-          fill-opacity: .7;
-          stroke: #666;
-          stroke-width: 0;
-        }
-
-    </style>
 
 
 <?php
@@ -82,8 +71,8 @@
 
     <script>
 
-        var width = 300,
-            height = 300,
+        var width = 350,
+            height = 350,
             τ = 2 * Math.PI;
 
         var dateVar = new Date();
@@ -92,8 +81,8 @@
         var halfdayVar = (((dateVar.getUTCHours() + 1) * 60) + minVar - 720) / 1440;
 
         var arc = d3.svg.arc()
-            .innerRadius(140)
-            .outerRadius(130)
+            .innerRadius(170)
+            .outerRadius(165)
             .startAngle(0);
 
         // Video player
@@ -106,13 +95,14 @@
         // Add the background arc, from 0 to 100% (τ).
         var background = video.append("path")
             .datum({endAngle: τ})
-            .style("fill", "#969696")
+            .style("fill", "#FFF")
+            .style("opacity", .3)
             .attr("d", arc);
 
         // Add the foreground arc
         var videoForeground = video.append("path")
             .datum({endAngle: hourVar * τ})
-            .style("fill", "#4696ff")
+            .style("fill", "#FFF")
             .attr("d", arc);
 
         // Use transition.call
@@ -133,12 +123,13 @@
 
         var background = radio.append("path")
             .datum({endAngle: τ})
-            .style("fill", "#969696")
+            .style("fill", "#FFF")
+            .style("opacity", .3)
             .attr("d", arc);
 
         var radioForeground = radio.append("path")
             .datum({endAngle: .127 * τ})
-            .style("fill", "#4696ff") 
+            .style("fill", "#FFF") 
             .attr("d", arc);
 
         setInterval(function() {

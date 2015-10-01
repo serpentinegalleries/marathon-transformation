@@ -141,6 +141,14 @@ code {
 .mythemes-topper {
     background: transparent !important;
 }
+.mythemes-topper .container {
+    margin: 0;
+    width: 100%;
+}
+header hgroup {
+    text-align: left !important;
+    padding-left: 15px !important; // Quick fix - CHANGE THIS!!!
+}
 header hgroup a {
     color: #FFF !important;
     font-family: 'gt_walsheimbold' !important;
@@ -212,3 +220,18 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
     text-align: center;
 }
 
+/************
+Weather Icons
+************/
+
+.weather-icons {
+    text-align: center !important;
+}
+.weather-icons img {
+    max-width: 30px;
+}
+.weather-icons div {
+    display: inline !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
