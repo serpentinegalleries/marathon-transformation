@@ -149,6 +149,9 @@ code {
 header hgroup {
     text-align: left !important;
 }
+header hgroup img {
+    max-width: 338px;
+}
 header hgroup a {
     color: #FFF !important;
     font-family: 'gt_walsheimbold' !important;
@@ -234,7 +237,7 @@ Weather Icons
     text-align: center !important;
 }
 .weather-icons img {
-    max-height: 25px;
+    max-height: 18px;
 }
 .weather-icons div {
     display: inline !important;
