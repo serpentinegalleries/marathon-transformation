@@ -142,9 +142,9 @@ code {
     background: transparent !important;
 }
 .mythemes-topper .container {
-    width: 95%;
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 header hgroup {
     text-align: left !important;
@@ -157,12 +157,18 @@ header hgroup a:hover {
     color: #969696 !important;
     text-decoration: none !important;
 }
+nav.header-nav {
+    padding-top: 61px !important;
+    padding-bottom: 61px !important
+}
 nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
     color: #FFF !important;
     background: transparent !important;
     text-transform: capitalize !important;
     font-size: 14px !important;
     line-height: 18px !important;
+    padding-right: 0 !important;
+    padding-left: 25px !important;
 }
 nav.base-nav ul li:hover > a, nav.base-nav ul li:hover > a:active {
     color: #969696 !important;
@@ -228,7 +234,7 @@ Weather Icons
     text-align: center !important;
 }
 .weather-icons img {
-    max-width: 30px;
+    max-height: 25px;
 }
 .weather-icons div {
     display: inline !important;
