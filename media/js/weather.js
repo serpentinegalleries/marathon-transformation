@@ -17,28 +17,18 @@ jQuery(document).ready(function( $ ) {
 		 wind = "London, " + month + " " + day + "<br>" + data.wind.speed + ", " + data.wind.deg ;
 	})
 
-	$('#icon-weather').click(function() {
-		if (showWeather) {
-			$('#text-weather').html("");
-			showWeather = false;
-		}
-		else {
-			$('#text-weather').html(weather);
-			showWeather = true;
-			showWind = false;				
-		}
+	$('#icon-weather').mouseenter(function() {
+		$('#text-weather').html(weather);
+	});
+	$('#icon-weather').mouseout(function() {
+		$('#text-weather').html("");
 	});
 
-	$('#icon-wind').click(function() {
-		if (showWind) {
-			$('#text-weather').html("");
-			showWind = false;
-		}
-		else {
-			$('#text-weather').html(wind);
-			showWind = true;
-			showWeather = false;	
-		}
+	$('#icon-wind').mouseenter(function() {
+		$('#text-weather').html(wind);
+	});
+	$('#icon-wind').mouseout(function() {
+		$('#text-weather').html("");
 	});
 
 });
