@@ -316,3 +316,82 @@ hr {
 body {
     overflow-x: hidden;
 }
+
+.rpwe-block ul{
+list-style: none !important;
+margin-left: 0 !important;
+padding-left: 0 !important;
+}
+
+.rpwe-block li{
+border-bottom: 1px solid #eee;
+margin-bottom: 10px;
+padding-bottom: 10px;
+list-style-type: none;
+}
+
+.rpwe-block a{
+display: inline !important;
+text-decoration: none;
+}
+
+.participants .rpwe-block h3, h3.rpwe-title {
+    font-family: 'gt_walsheimbold';
+    font-size: 24px !important;
+    line-height: 29px !important;  
+}
+
+.rpwe-thumb{
+border: 1px solid #eee !important;
+box-shadow: none !important;
+margin: 2px 10px 2px 0;
+padding: 3px !important;
+}
+
+.participants .rpwe-summary{
+    font-family: serif;
+    font-size: 26px;
+    line-height: 35px;
+    font-family: 'surveyor_textlight' !important;
+}
+
+.rpwe-time{
+color: #bbb;
+font-size: 11px;
+}
+
+.rpwe-comment{
+color: #bbb;
+font-size: 11px;
+padding-left: 5px;
+}
+
+.rpwe-alignleft{
+display: inline;
+float: left;
+}
+
+.rpwe-alignright{
+display: inline;
+float: right;
+}
+
+.rpwe-aligncenter{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.rpwe-clearfix:before,
+.rpwe-clearfix:after{
+content: "";
+display: table !important;
+}
+
+.rpwe-clearfix:after{
+clear: both;
+}
+
+.rpwe-clearfix{
+zoom: 1;
+}

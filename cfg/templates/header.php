@@ -132,6 +132,11 @@
             .style("fill", "#FFF") 
             .attr("d", arc);
 
+        radio.append("svg:text")
+                .style("font-size","4em")
+                .style("font-weight","bold")
+                .text("hello");
+
         setInterval(function() {
           radioForeground.transition()
               .duration(d3.time.minute)
