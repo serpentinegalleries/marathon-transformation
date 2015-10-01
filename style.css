@@ -241,6 +241,12 @@ Weather Icons
 }
 .weather-icons div {
     display: inline !important;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#text-weather {
+    display: block !important;
+    color: #FFF;
+    margin-top: 12px !important;
+
 }
