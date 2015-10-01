@@ -185,5 +185,7 @@
 
         <?php wp_footer(); ?>
 
+        <script src="/wp-content/themes/transformation/media/js/weather.js"></script>
+
     </body>
 </html>
