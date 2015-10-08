@@ -303,6 +303,10 @@ SECTIONS
     text-align: center;
 }
 
+.widget-title {
+    display: none;
+}
+
 /*******************
 PLAYER VISUALISAION
 *******************/

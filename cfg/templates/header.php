@@ -2,7 +2,7 @@
 <?php
    $bkg = '';
    if( is_admin() ){
-	  $bkg = 'background-image: url(' . get_header_image() . '); background-position: top center; background-attachment: fixed; background-size: cover; background-repeat: no-repeat;';
+	  $bkg = 'background-image: url(' . get_header_image() . '); background-position: top center; background-size: cover; background-repeat: no-repeat;';
    }
 ?>
 

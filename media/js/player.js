@@ -1,3 +1,38 @@
+	/* Countdown */
+
+	var deadline = 'October 18 2015 11:59:59 GMT+01:00';
+
+	function getTimeRemaining(endtime){
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+var hourScale = d3.scale.linear()
+	.range([0,330])
+	.domain([0,11])
+
+	/*face.selectAll('.hour-tick')
+		.data(d3.range(0,12)).enter()
+			.append('line')
+			.attr('class', 'hour-tick')
+			.attr('x1',0)
+			.attr('x2',0)
+			.attr('y1',hourTickStart)
+			.attr('y2',hourTickStart + hourTickLength)
+			.attr('transform',function(d){
+				return 'rotate(' + hourScale(d) + ')';
+			});*/
+
 	var width = 500,
 	  height = 425,
 	  τ = 2 * Math.PI;
@@ -125,3 +160,4 @@
 	  };
 	});
 	}
+
