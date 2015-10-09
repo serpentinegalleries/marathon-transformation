@@ -34,13 +34,26 @@ jQuery(document).ready(function( $ ) {
 
 
 	$('.participant-title').on('click', function () {
-		console.log('hello');
 
 		$participant = $(this);
 
 		$participant_section = $participant.closest('.participant-text');
 
 		$participant_section.find('.participant-body').show(1000);
+
+		$participant_section.find('.participant-hide').show(1000);
+
+	});
+
+	$('.participant-hide').on('click', function () {
+
+		$participant = $(this);
+
+		$participant_section = $participant.closest('.participant-text');
+
+		$participant_section.find('.participant-body').hide(1000);
+
+		$participant_section.find('.participant-hide').hide(1000);
 
 	});
 

@@ -444,7 +444,7 @@ body {
     font-family: 'gt_walsheimbold';
 }
 
-.participants-list .share {
+.participants-list .share, .participants-list .participant-hide {
     text-align: center;    
 }
 
@@ -462,4 +462,12 @@ body {
 .participants-list .participant-body {
     margin-top: 25px;
     display: none;
+}
+
+.participants-list .participant-hide {
+    display: none;
+}
+
+.participants-list .participant-hide:hover {
+    cursor: pointer;
 }
