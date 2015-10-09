@@ -32,4 +32,37 @@ jQuery(document).ready(function( $ ) {
 		$('#text-weather').html("");
 	});
 
+
+	$('.participant-title').on('click', function () {
+		console.log('hello');
+
+		$participant = $(this);
+
+		$participant_section = $participant.closest('.participant-text');
+
+		$participant_section.find('.participant-body').css("display", "block");
+
+	});
+
+	 /* $(this).closest('.participant');
+
+	  if (box.hasClass('hidden')) {
+	    
+	    box.removeClass('hidden');
+	    setTimeout(function () {
+	      box.removeClass('visuallyhidden');
+	    }, 20);
+
+	  } else {
+	    
+	    box.addClass('visuallyhidden');
+	    
+	    box.one('transitionend', function(e) {
+
+	      box.addClass('hidden');
+
+	    });
+	    
+	  }*/
+
 });

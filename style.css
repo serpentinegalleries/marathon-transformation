@@ -424,16 +424,17 @@ body {
     overflow-x: hidden;
 }
 
-.participants-list .text {
+.participants-list .participant-text {
     width: 75%;
     display: block;
     margin: 0 auto;
     padding: 20px 0;
 }
-
-.participants-list .content-body {
-    margin-top: 25px;
+.participants-list a:visited, .participants-list a:active {
+    color: #000;
+    text-decoration: none;
 }
+
 .participants-list .post-content {
     font-family: 'gt_walsheimthin';
     font-size: 18px;
@@ -450,9 +451,15 @@ body {
 .participants-list .share a {
     color: #969696;
 }
+
 .participants-list .share p {
     text-align: center;
     margin-top: 25px;
     font-size: 18px;
     line-height: 27px;
+}
+
+.participants-list .participant-body {
+    margin-top: 25px;
+    display: none;
 }

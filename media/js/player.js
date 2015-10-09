@@ -161,3 +161,28 @@ var hourScale = d3.scale.linear()
 	});
 	}
 
+
+
+/*$('participant-title').on('click', function () {
+
+  
+  if (box.hasClass('hidden')) {
+    
+    box.removeClass('hidden');
+    setTimeout(function () {
+      box.removeClass('visuallyhidden');
+    }, 20);
+
+  } else {
+    
+    box.addClass('visuallyhidden');
+    
+    box.one('transitionend', function(e) {
+
+      box.addClass('hidden');
+
+    });
+    
+  }
+
+});*/
