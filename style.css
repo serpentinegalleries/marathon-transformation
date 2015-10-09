@@ -403,7 +403,7 @@ PARTICIPANTS
 .participants-list h5,
 .participants-list h6
  {
-    text-align: left !important;
+    text-align: left;
 }
 
 .participants-list a {
@@ -428,12 +428,31 @@ body {
     width: 75%;
     display: block;
     margin: 0 auto;
-    padding: 0;
+    padding: 20px 0;
 }
 
-.participants-list .post-content {
+.participants-list .content-body {
     margin-top: 25px;
+}
+.participants-list .post-content {
     font-family: 'gt_walsheimthin';
+    font-size: 18px;
+    line-height: 27px;
+}
+.participants-list .post-content a {
+    font-family: 'gt_walsheimbold';
+}
+
+.participants-list .share {
+    text-align: center;    
+}
+
+.participants-list .share a {
+    color: #969696;
+}
+.participants-list .share p {
+    text-align: center;
+    margin-top: 25px;
     font-size: 18px;
     line-height: 27px;
 }
