@@ -40,7 +40,7 @@ jQuery(document).ready(function( $ ) {
 
 		$participant_section = $participant.closest('.participant-text');
 
-		$participant_section.find('.participant-body').css("display", "block");
+		$participant_section.find('.participant-body').show(1000);
 
 	});
 

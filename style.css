@@ -428,19 +428,19 @@ body {
     width: 75%;
     display: block;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 5px 0;
 }
-.participants-list a:visited, .participants-list a:active {
+.participants-list a:visited, .participants-list a:active, .participants-list a:focus {
     color: #000;
     text-decoration: none;
 }
 
-.participants-list .post-content {
+.participants-list .participant-content {
     font-family: 'gt_walsheimthin';
     font-size: 18px;
     line-height: 27px;
 }
-.participants-list .post-content a {
+.participants-list .participant-content a {
     font-family: 'gt_walsheimbold';
 }
 
