@@ -295,6 +295,11 @@ hr {
     border-top: 1px solid #969696 !important;
 }
 
+a:focus {
+    border: none !important;
+    outline-color: transparent !important;
+}
+
 /******************
 SECTIONS
 ******************/
@@ -487,7 +492,7 @@ PARTICIPANTS
 }
 .participant-url {
     position: relative;
-    top:-20px;
+    top:-70px;
     display: block;
     height: 0;
     width:0;

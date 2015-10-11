@@ -75,6 +75,9 @@ jQuery(document).ready(function( $ ) {
 	});
 
 
+	/*********************
+	PARTICIPANTS
+	*********************/
 
 	$('.participant-title').on('click', function () {
 
@@ -100,6 +103,29 @@ jQuery(document).ready(function( $ ) {
 
 	});
 
+	var participant_ids = [];
 
+	$(".participant-title").map(function() { participant_ids.push(('#' + this.id)); });
+
+
+	$(window).on('load', function(e){
+		if(participant_ids.indexOf(window.location.hash))
+			{
+				var $participantId = $(window.location.hash);
+				console.log($participantId);
+				$participantId.closest('.participant-text').find('.participant-body').show(700);
+				$participantId.closest('.participant-text').find('.participant-hide').show(700);
+			}
+	});	
+
+	$(window).on('hashchange', function(e){
+		if(participant_ids.indexOf(window.location.hash))
+			{
+				var $participantId = $(window.location.hash);
+				console.log($participantId);
+				$participantId.closest('.participant-text').find('.participant-body').show(700);
+				$participantId.closest('.participant-text').find('.participant-hide').show(700);
+			}
+	});	
 
 });
