@@ -39,9 +39,9 @@ jQuery(document).ready(function( $ ) {
 
 		$participant_section = $participant.closest('.participant-text');
 
-		$participant_section.find('.participant-body').show(1000);
+		$participant_section.find('.participant-body').toggle(700);
 
-		$participant_section.find('.participant-hide').show(1000);
+		$participant_section.find('.participant-hide').toggle(700);
 
 	});
 
@@ -51,9 +51,9 @@ jQuery(document).ready(function( $ ) {
 
 		$participant_section = $participant.closest('.participant-text');
 
-		$participant_section.find('.participant-body').hide(1000);
+		$participant_section.find('.participant-body').hide(700);
 
-		$participant_section.find('.participant-hide').hide(1000);
+		$participant_section.find('.participant-hide').hide(700);
 
 	});
 

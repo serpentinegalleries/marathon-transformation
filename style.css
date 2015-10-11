@@ -196,7 +196,7 @@ header hgroup a {
     color: #FFF !important;
     font-family: 'gt_walsheimbold' !important;
 }
-header hgroup a:hover {
+header hgroup a:hover, header hgroup a:focus, header hgroup a:active {
     color: #969696 !important;
     text-decoration: none !important;
 }
@@ -204,6 +204,7 @@ nav.header-nav {
     padding-top: 61px !important;
     padding-bottom: 0px !important
 }
+/* Nav links */
 nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
     color: #FFF !important;
     background: transparent !important;
@@ -213,10 +214,11 @@ nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
     padding-right: 0 !important;
     padding-left: 20px !important; /*Review this */
 }
-nav.base-nav ul li:hover > a, nav.base-nav ul li:hover > a:active {
+nav.base-nav ul li:hover > a, nav.base-nav ul li:hover > a:active, nav.base-nav ul li:hover > a:focus {
     color: #969696 !important;
     text-decoration: none !important;
 }
+/* Header image */
 .mythemes-header {
     min-height: 700px;
     padding-bottom: 100px;
@@ -251,7 +253,7 @@ footer {
 
 
 /**********************
-CONTAINERS
+CONTAINERS & ELEMENTS
 **********************/
 
 .content {
@@ -278,7 +280,9 @@ CONTAINERS
 article {
     margin-bottom: 0 !important;
 }
-
+hr {
+    border-top: 1px solid #969696 !important;
+}
 
 /******************
 SECTIONS
@@ -302,7 +306,6 @@ SECTIONS
     padding: 75px 0;
     text-align: center;
 }
-
 .widget-title {
     display: none;
 }
@@ -349,7 +352,6 @@ PLAYER VISUALISAION
 }
 
 #player .status {
-    /* H2 style */
     font-family: 'gt_walsheimbold';
     font-size: 14px;
     line-height: 18px;
@@ -358,11 +360,13 @@ PLAYER VISUALISAION
     color: #FFF !important;
 }
 #player .name {
+    /* h5 style */
     font-family: 'gt_walsheimbold';
     font-size: 24px;
     line-height: 29px;  
 }
 #player .title {
+    /* h3 style */
     font-family: 'gt_walsheimthin';
     font-size: 24px;
     line-height: 29px;  
@@ -412,18 +416,6 @@ PARTICIPANTS
 .participants-list a:hover {
     color: #969696;
 }
-
-hr {
-    border-top: 1px solid #000 !important;
- // width: 200%;
-//  margin-left: -50%;
-}
-
-/* Hack to have HR not extend past screen */
-body {
-    overflow-x: hidden;
-}
-
 .participants-list .participant-text {
     width: 75%;
     display: block;
@@ -434,7 +426,6 @@ body {
     color: #000;
     text-decoration: none;
 }
-
 .participants-list .participant-content {
     font-family: 'gt_walsheimthin';
     font-size: 18px;
@@ -443,31 +434,29 @@ body {
 .participants-list .participant-content a {
     font-family: 'gt_walsheimbold';
 }
-
 .participants-list .share, .participants-list .participant-hide {
     text-align: center;    
 }
-
 .participants-list .share a {
     color: #969696;
 }
-
 .participants-list .share p {
     text-align: center;
     margin-top: 25px;
     font-size: 18px;
     line-height: 27px;
 }
-
 .participants-list .participant-body {
     margin-top: 25px;
     display: none;
 }
-
 .participants-list .participant-hide {
     display: none;
 }
-
+.participants-list .participant-hide h2 {
+    font-size: 64px;
+    text-align: center;
+}
 .participants-list .participant-hide:hover {
     cursor: pointer;
 }
