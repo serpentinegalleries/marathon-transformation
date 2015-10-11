@@ -125,6 +125,10 @@ jQuery(document).ready(function( $ ) {
 				$participantId.closest('.participant-text').find('.participant-body').show(700);
 				$participantId.closest('.participant-text').find('.participant-hide').show(700);
 			}
-	});	
+	});
+
+	if ($(window).width() < 540) {
+		$('#supporters').attr('src', "/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
+	}
 
 });
