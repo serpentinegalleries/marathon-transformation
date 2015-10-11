@@ -83,6 +83,8 @@ jQuery(document).ready(function( $ ) {
 
 		$participant = $(this);
 
+		//window.location.hash = '#' + $participant.attr('id');
+
 		$participant_section = $participant.closest('.participant-text');
 
 		$participant_section.find('.participant-body').toggle(700);
@@ -107,12 +109,10 @@ jQuery(document).ready(function( $ ) {
 
 	$(".participant-title").map(function() { participant_ids.push(('#' + this.id)); });
 
-
 	$(window).on('load', function(e){
 		if(participant_ids.indexOf(window.location.hash))
 			{
 				var $participantId = $(window.location.hash);
-				console.log($participantId);
 				$participantId.closest('.participant-text').find('.participant-body').show(700);
 				$participantId.closest('.participant-text').find('.participant-hide').show(700);
 			}
@@ -122,7 +122,6 @@ jQuery(document).ready(function( $ ) {
 		if(participant_ids.indexOf(window.location.hash))
 			{
 				var $participantId = $(window.location.hash);
-				console.log($participantId);
 				$participantId.closest('.participant-text').find('.participant-body').show(700);
 				$participantId.closest('.participant-text').find('.participant-hide').show(700);
 			}

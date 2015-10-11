@@ -497,3 +497,6 @@ PARTICIPANTS
     height: 0;
     width:0;
 }
+.participant-title {
+    cursor: pointer;
+}
