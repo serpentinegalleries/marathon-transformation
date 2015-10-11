@@ -251,6 +251,14 @@ footer {
     padding: 0 !important;
 }
 
+footer img {
+    max-width: 100%;
+}
+
+footer #supporters {
+    margin: 20px 0;
+}
+
 
 /**********************
 CONTAINERS & ELEMENTS

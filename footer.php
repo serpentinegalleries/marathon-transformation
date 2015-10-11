@@ -184,7 +184,11 @@
                                 ?>
                             </div>
                         <!--</div>-->
+
                     </div>
+                    <div class="row">
+                        <img id="supporters" src="/wp-content/themes/transformation/media/img/marathon_supporters.svg">
+                    </div>  
                 </div>
             </div>
         </footer>
