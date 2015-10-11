@@ -436,7 +436,7 @@ PARTICIPANTS
     width: 75%;
     display: block;
     margin: 0 auto;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 .participants-list a:visited, .participants-list a:active, .participants-list a:focus {
     color: #000;
@@ -487,7 +487,7 @@ PARTICIPANTS
 }
 .participant-url {
     position: relative;
-    top:-50px;
+    top:-20px;
     display: block;
     height: 0;
     width:0;
