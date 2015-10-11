@@ -1,25 +1,30 @@
+jQuery(document).ready(function( $ ) {
+
 	/* Countdown */
 
-	var deadline = 'October 18 2015 11:59:59 GMT+01:00';
+	var saturday = 'October 17 2015 09:59:59 GMT+01:00';
+	var sunday = 'October 18 2015 11:59:59 GMT+01:00';
+
+	var timeLeft;
 
 	function getTimeRemaining(endtime){
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor( (t/1000) % 60 );
-  var minutes = Math.floor( (t/1000/60) % 60 );
-  var hours = Math.floor( (t/(1000*60*60)) % 24 );
-  var days = Math.floor( t/(1000*60*60*24) );
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
+		var t = Date.parse(endtime) - Date.parse(new Date());
+		var seconds = Math.floor( (t/1000) % 60 );
+		var minutes = Math.floor( (t/1000/60) % 60 );
+		var hours = Math.floor( (t/(1000*60*60)) % 24 );
+		var days = Math.floor( t/(1000*60*60*24) );
+		return {
+			'total': t,
+			'days': days,
+			'hours': hours,
+			'minutes': minutes,
+			'seconds': seconds
+		};
+	}
 
-var hourScale = d3.scale.linear()
-	.range([0,330])
-	.domain([0,11])
+	var hourScale = d3.scale.linear()
+		.range([0,330])
+		.domain([0,11])
 
 	/*face.selectAll('.hour-tick')
 		.data(d3.range(0,12)).enter()
@@ -163,26 +168,19 @@ var hourScale = d3.scale.linear()
 
 
 
-/*$('participant-title').on('click', function () {
+/*************
+Resize player
+*************/
 
-  
-  if (box.hasClass('hidden')) {
-    
-    box.removeClass('hidden');
-    setTimeout(function () {
-      box.removeClass('visuallyhidden');
-    }, 20);
+	var aspect = 500 / 425,
+	    videoViz = $("#video-viz"),
+	    radioViz = $("#radio-viz");
+	$(window).on("resize", function() {
+	    var targetWidth = videoViz.parent().width();
+	    videoViz.attr("width", targetWidth);
+	    videoViz.attr("height", targetWidth / aspect);
+	    radioViz.attr("width", targetWidth);
+	    radioViz.attr("height", targetWidth / aspect);
+	});
 
-  } else {
-    
-    box.addClass('visuallyhidden');
-    
-    box.one('transitionend', function(e) {
-
-      box.addClass('hidden');
-
-    });
-    
-  }
-
-});*/
+});
