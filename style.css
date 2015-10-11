@@ -288,6 +288,9 @@ CONTAINERS & ELEMENTS
 article {
     margin-bottom: 0 !important;
 }
+.content {
+    background: #eeeeee !important;
+}
 hr {
     border-top: 1px solid #969696 !important;
 }
@@ -472,4 +475,13 @@ PARTICIPANTS
 }
 .participants-list .participant-hide:hover {
     cursor: pointer;
+}
+.participant-menu h5 {
+    text-align: center;
+}
+.participant-menu h5 a {
+    color: #000 !important;
+}
+.participant-menu a:active, .participant-menu a:hover {
+    text-decoration: underline;
 }
