@@ -22,21 +22,31 @@ jQuery(document).ready(function( $ ) {
 		};
 	}
 
+	/* For Marathon start countdown */
+	function initializeHoursClock(id, endtime){
+	  var clock = document.getElementById(id);
+	  var timeinterval = setInterval(function(){
+	    var t = getTimeRemaining(endtime);
+	    clock.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
+	    if(t.total<=0){
+	      clearInterval(timeinterval);
+	    }
+	  },1000);
+	}
+
+	function initializeDaysClock(id, endtime){
+	  var clock = document.getElementById(id);
+	    var t = getTimeRemaining(endtime);
+	    clock.innerHTML = "-" + t.days+ " DAYS";
+	}
+
+/**********
+PLAYER
+**********/
+
 	var hourScale = d3.scale.linear()
 		.range([0,330])
 		.domain([0,11])
-
-	/*face.selectAll('.hour-tick')
-		.data(d3.range(0,12)).enter()
-			.append('line')
-			.attr('class', 'hour-tick')
-			.attr('x1',0)
-			.attr('x2',0)
-			.attr('y1',hourTickStart)
-			.attr('y2',hourTickStart + hourTickLength)
-			.attr('transform',function(d){
-				return 'rotate(' + hourScale(d) + ')';
-			});*/
 
 	var width = 500,
 	  height = 425,
@@ -48,14 +58,15 @@ jQuery(document).ready(function( $ ) {
 	var halfdayVar = (((dateVar.getUTCHours() + 1) * 60) + minVar - 720) / 1440;
 
 	var arc = d3.svg.arc()
-	  .innerRadius(190)
-	  .outerRadius(185)
+	  .innerRadius(180)
+	  .outerRadius(175)
 	  .startAngle(0);
 
+    var hourTickStart = 193;
+    var hourTickLength = -5;
+
 	// Video player
-	var video = d3.select("#videoPlayer").append("svg")
-	  .attr("width", width)
-	  .attr("height", height)
+	var video = d3.select("#video-viz")
 	.append("g")
 	  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
 
@@ -99,6 +110,21 @@ jQuery(document).ready(function( $ ) {
 		 .attr("class", "title")
 		 .text("The Last Silent Movie");
 
+	/* Draw hour hands */
+	video.selectAll('.hour-tick')
+		.data(d3.range(0,12)).enter()
+			.append('line')
+			.attr('class', 'hour-tick')
+			.attr('x1',0)
+			.attr('x2',0)
+			.attr('y1',hourTickStart)
+			.attr('y2',hourTickStart + hourTickLength)
+			.style("stroke-width", "2px")
+			.style("stroke", "#FFF")
+			.attr('transform',function(d){
+				return 'rotate(' + hourScale(d) + ')';
+			});
+
 	// Use transition.call
 	// (identical to selection.call) so that we can encapsulate the logic for
 	// tweening the arc in a separate function below.
@@ -109,9 +135,7 @@ jQuery(document).ready(function( $ ) {
 	}, 1500);
 
 	// Radio Player
-	var radio = d3.select("#radioPlayer").append("svg")
-	  .attr("width", width)
-	  .attr("height", height)
+	var radio = d3.select("#radio-viz")
 	.append("g")
 	  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
 
@@ -143,6 +167,22 @@ jQuery(document).ready(function( $ ) {
 		 .attr("text-anchor", "middle")
 		 .attr("class", "countdown")
 		 .text("14:59:00");
+
+	// Hour ticks
+	radio.selectAll('.hour-tick')
+		.data(d3.range(0,12)).enter()
+			.append('line')
+			.attr('class', 'hour-tick')
+			.attr('x1',0)
+			.attr('x2',0)
+			.attr('y1',hourTickStart)
+			.attr('y2',hourTickStart + hourTickLength)
+			.style("stroke-width", "2px")
+			.style("stroke", "#FFF")
+			.attr('transform',function(d){
+				return 'rotate(' + hourScale(d) + ')';
+			});
+
 
 	setInterval(function() {
 	radioForeground.transition()
