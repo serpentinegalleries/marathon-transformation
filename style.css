@@ -485,3 +485,10 @@ PARTICIPANTS
 .participant-menu a:active, .participant-menu a:hover {
     text-decoration: underline;
 }
+.participant-url {
+    position: relative;
+    top:-50px;
+    display: block;
+    height: 0;
+    width:0;
+}
