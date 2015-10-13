@@ -388,6 +388,14 @@ PLAYER VISUALISAION
     font-size: 24px;
     line-height: 29px;  
 }
+
+#player #watch {
+    /* h5 style */
+    font-family: 'gt_walsheimbold';
+    font-size: 24px;
+    line-height: 29px;
+    cursor: pointer;
+}
 /*******************
 WEATHER ICONS
 *******************/

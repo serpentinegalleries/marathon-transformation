@@ -44,6 +44,8 @@ jQuery(document).ready(function( $ ) {
 PLAYER
 **********/
 
+
+
 	var hourScale = d3.scale.linear()
 		.range([0,330])
 		.domain([0,11])
@@ -99,7 +101,13 @@ PLAYER
 		 .attr("stroke-width", -1)
 		 .attr("text-anchor", "middle")
 		 .attr("class", "name")
-		 .text("Susan Miller");
+		 .text("Susan Miller")
+    		//.attr("xlink:href", function(d) {return "http://somelink.com"});
+/*
+
+
+	linkOut.append("a")
+    		.attr("xlink:href", function(d) {return "http://somelink.com"});*/
 
 	video.append("svg:text")
 		 .attr("x", 0)
@@ -109,6 +117,22 @@ PLAYER
 		 .attr("text-anchor", "middle")
 		 .attr("class", "title")
 		 .text("The Last Silent Movie");
+
+	video.append("svg:text")
+		 .attr("x", 0)
+		 .attr("y", 95)
+		 .style("fill", "#FFF")
+		 .attr("stroke-width", -1)
+		 .attr("text-anchor", "middle")
+		 .attr("id", "watch")
+		 .text("watch")
+		 .on("click", function() { window.open("https://www.youtube.com/watch_popup?v=TxqYaPWvujg"); });
+
+	video.append("svg:span")
+		 .attr("x", 0)
+		 .attr("y", 95)
+		 .style("fill", "#FFF")
+		.attr("class", "glyphicon glyphicon-search");
 
 	/* Draw hour hands */
 	video.selectAll('.hour-tick')
@@ -168,6 +192,15 @@ PLAYER
 		 .attr("class", "countdown")
 		 .text("14:59:00");
 
+	radio.append("svg:text")
+		 .attr("x", 0)
+		 .attr("y", 95)
+		 .style("fill", "#FFF")
+		 .attr("stroke-width", -1)
+		 .attr("text-anchor", "middle")
+		 .attr("class", "name")
+		 .text("listen");
+
 	// Hour ticks
 	radio.selectAll('.hour-tick')
 		.data(d3.range(0,12)).enter()
@@ -207,6 +240,7 @@ PLAYER
 	}
 
 
+	$('<a href="//hello.com"></a>').appendTo($('name'));
 
 /*************
 Resize player
