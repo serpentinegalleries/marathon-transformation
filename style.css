@@ -316,6 +316,10 @@ SECTIONS
 .front-page-section-highlight h6 {
     color: #FFF !important;
 }
+.front-page-section-highlight h1 {
+    text-align: center;
+}
+
 .textwidget {
     width: 75%;
     display: block;
@@ -451,6 +455,7 @@ PARTICIPANTS
     display: block;
     margin: 0 auto;
     padding: 10px 0;
+    cursor: pointer;
 }
 .participants-list a:visited, .participants-list a:active, .participants-list a:focus {
     color: #000;
@@ -508,4 +513,34 @@ PARTICIPANTS
 }
 .participant-title {
     cursor: pointer;
+}
+
+/**************
+Schedule
+**************/
+
+#schedule {
+    color: #FFF;
+}
+
+#schedule h1 {
+    text-align: center !important;
+}
+#schedule h5 {
+    font-family: 'gt_walsheimbold';
+    font-size: 36px;
+    line-height: 40px;
+}
+
+#schedule a {
+    color: #FFF;
+}
+
+#schedule hr {
+    border-top: 1px solid #fff !important;
+}
+
+#schedule span {
+    font-family: 'surveyor_textlight' !important;    
+    font-size: 26px;
 }

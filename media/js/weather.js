@@ -79,7 +79,18 @@ jQuery(document).ready(function( $ ) {
 	PARTICIPANTS
 	*********************/
 
-	$('.participant-title').on('click', function () {
+	$('.participant-text').on('click', function () {
+
+		$participant = $(this);
+
+		$participant.find('.participant-body').toggle(700);
+
+		$participant.find('.participant-hide').toggle(700);
+
+	});
+
+
+	/*$('.participant-title').on('click', function () {
 
 		$participant = $(this);
 
@@ -103,7 +114,7 @@ jQuery(document).ready(function( $ ) {
 
 		$participant_section.find('.participant-hide').hide(700);
 
-	});
+	});*/
 
 	var participant_ids = [];
 
