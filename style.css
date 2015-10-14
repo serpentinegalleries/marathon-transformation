@@ -597,3 +597,16 @@ p.srp-post-date {
     font-size: 26px;
     padding: 100px 0;
 }
+
+.srp-post-content a {
+    font-family: 'surveyor_textlight' !important;
+    font-size: 26px;
+    padding: 100px 0;
+    color: #000;
+    font-weight: 700;
+}
+
+.srp-post-content a:hover {
+    color: #969696;
+    font-weight: 700;
+}
