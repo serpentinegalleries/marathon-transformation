@@ -582,7 +582,10 @@ hr#programme {
     color: #969696;
 }
 .srp-post-title {
+    display: block;
+    margin: 0 auto;
     text-align: center !important;
+    max-width: 50%
 }
 p.srp-post-date {
     font-family: 'gt_walsheimbold' !important;
