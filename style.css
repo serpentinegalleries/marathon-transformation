@@ -613,3 +613,43 @@ p.srp-post-date {
     color: #969696;
     font-weight: 700;
 }
+
+#blog-page nav.base-nav ul li a {
+    color: #000 !important;
+}
+#blog .container {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+#blog p, #blog hr {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px auto;
+}
+
+#blog h1,
+#blog h2,
+#blog h3,
+#blog h4,
+#blog h5,
+#blog h6 {
+    width: 80%;
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#blog article {
+    margin: 100px 0;
+}
+
+#blog a {
+    color: #000;
+}
+
+#blog a:hover {
+    color: #eee;
+}
