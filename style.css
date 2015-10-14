@@ -377,7 +377,7 @@ PLAYER VISUALISAION
     color: #FFF !important;
 }
 
-#player .status {
+.status {
     font-family: 'gt_walsheimbold';
     font-size: 14px;
     line-height: 18px;
@@ -622,12 +622,19 @@ p.srp-post-date {
     display: block;
     margin: 0 auto;
 }
-#blog p, #blog hr {
+#blog p {
+    width: 80%;
+    display: block;
+    margin: 35px auto;
+}
+
+#blog hr {
     width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin: 50px auto;
+    margin-top: 200px;
+    margin-bottom: 0;
 }
 
 #blog h1,
@@ -636,14 +643,15 @@ p.srp-post-date {
 #blog h4,
 #blog h5,
 #blog h6 {
-    width: 80%;
+    width: 60%;
     display: block;
-    margin: 50px auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
 #blog article {
-    margin: 100px 0;
+    margin: 0;
 }
 
 #blog a {
@@ -652,4 +660,26 @@ p.srp-post-date {
 
 #blog a:hover {
     color: #eee;
+}
+
+#blog .header-block {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#blog h5 {
+    padding-top: 25px;
+    margin-top: 0;
+}
+
+#blog .status {
+    color: #000 !important;
+    text-align: center !important;
+    margin: 15px 0;
+}
+
+#blog p img {
+    width: 130%;
+    height: auto;
+    margin: 15px -15%;
 }
