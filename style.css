@@ -305,6 +305,11 @@ a:focus {
 SECTIONS
 ******************/
 
+.front-page-section-highlight {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
 .front-page-section-highlight p {
     color: #FFF !important;
 }
@@ -411,10 +416,6 @@ WEATHER ICONS
     max-height: 30px;
     width: 30px;
     cursor: pointer;
-    opacity: .5;
-}
-.weather-icons img:hover {
-    opacity: 1;
 }
 .weather-icons div {
     display: inline !important;
@@ -485,12 +486,11 @@ PARTICIPANTS
     margin-top: 25px;
     display: none;
 }
-.participants-list .participant-hide {
-    display: none;
-}
 .participants-list .participant-hide h2 {
     font-size: 64px;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 .participants-list .participant-hide:hover {
     cursor: pointer;
@@ -525,6 +525,7 @@ Schedule
 
 #schedule h1 {
     text-align: center !important;
+    margin-top: 0 !important;
 }
 #schedule h5 {
     font-family: 'gt_walsheimbold';
@@ -539,8 +540,27 @@ Schedule
 #schedule hr {
     border-top: 1px solid #fff !important;
 }
-
-#schedule span {
+#schedule .participant-content {
     font-family: 'surveyor_textlight' !important;    
     font-size: 26px;
+}
+#schedule .participant-content span {
+    font-family: 'surveyor_textlight' !important;    
+    font-size: 26px;
+}
+#schedule a:hover {
+    opacity: .5;
+}
+h5#programme {
+    text-align: center !important;
+}
+h1#programme {
+    padding-bottom: 125px !important;
+}
+hr#programme {
+    border-top: 1px solid #fff !important;
+}
+
+.panel-grid-cell .so-panel {
+    margin-bottom: 0 !important;
 }

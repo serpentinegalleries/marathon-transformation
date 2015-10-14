@@ -85,7 +85,6 @@ jQuery(document).ready(function( $ ) {
 
 		$participant.find('.participant-body').toggle(700);
 
-		$participant.find('.participant-hide').toggle(700);
 
 	});
 
@@ -125,7 +124,6 @@ jQuery(document).ready(function( $ ) {
 			{
 				var $participantId = $(window.location.hash);
 				$participantId.closest('.participant-text').find('.participant-body').show(700);
-				$participantId.closest('.participant-text').find('.participant-hide').show(700);
 			}
 	});	
 
@@ -134,7 +132,6 @@ jQuery(document).ready(function( $ ) {
 			{
 				var $participantId = $(window.location.hash);
 				$participantId.closest('.participant-text').find('.participant-body').show(700);
-				$participantId.closest('.participant-text').find('.participant-hide').show(700);
 			}
 	});
 
