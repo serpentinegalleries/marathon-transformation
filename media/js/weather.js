@@ -131,4 +131,5 @@ jQuery(document).ready(function( $ ) {
 		$('#supporters').attr('src', "/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
 	}
 
+
 });
