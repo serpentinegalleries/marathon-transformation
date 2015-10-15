@@ -93,7 +93,9 @@ TYPOGRAPHY
 p {
     font-family: 'surveyor_textlight' !important;
 }
-
+body {
+    background: #eee !important;
+}
 
 /*****************
 WORDPRESS

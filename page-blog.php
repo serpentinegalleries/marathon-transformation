@@ -1,9 +1,9 @@
 <?php /* Template Name: Blog */ ?>
 
-<div id="blog-page">
-<?php get_header(); ?>
+    <div id="blog-page">
+    <?php get_header(); ?>
 
-<div id="blog">
+        <div id="blog">
                 <div class="container">
                     <div class="row">
 

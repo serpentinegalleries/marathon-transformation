@@ -1,82 +1,44 @@
+<div id="blog-page">
 <?php get_header(); ?>
 
-
-    <div class="content">
+    <div id="blog">
         <div class="container">
             <div class="row">
 
-            <?php
-                global $post;
-
-                /* GET LAYOUT DETAILS */
-                $myThemes_layout = new mythemes_layout( 'single' , $post -> ID );
-
-                /* LEFT SIDEBAR */
-                $myThemes_layout -> echoSidebar( 'left' );
-            ?>
                 <!-- CONTENT -->
-                <section class="<?php echo $myThemes_layout -> contentClass(); ?>">
 
                 <?php
-                    /* LEFT WRAPPER */
-                    $myThemes_layout ->  contentWrapper( 'left' );
 
                     if( have_posts() ){
                         while( have_posts() ){
                             the_post();    
                 ?>
-                            <article <?php post_class( 'row-fluid' ); ?>>
+                            <article>
+                                <div class="header-block">
+                                    <div class="status">Transformation live blog</div>
+                                    <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-                                <?php
-                                    $classes = 'no-thumbnail';
+                                    <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
 
-                                    if( has_post_thumbnail() ){
-                                ?>
-                                        <div class="post-thumbnail">
-                                            <?php echo get_the_post_thumbnail( $post -> ID , 'full-thumbnail' , esc_attr( $post -> post_title ) ); ?>
-                                            <?php $caption = get_post( get_post_thumbnail_id() ) -> post_excerpt; ?>
-                                            <?php if( !empty( $caption ) ) { ?>
-                                                <footer><?php echo $caption; ?></footer>
-                                            <?php } ?>
-                                        </div>
-                                <?php
-                                        $classes = '';
-                                    }
-                                ?>
+                                    <h5>by <?php the_author_posts_link(); ?> &#8212; <?php the_time('j F Y'); ?></h5>
+                                </div>
 
-                                <!-- TITLE -->
-                                <h1 class="post-title <?php echo $classes; ?>"><?php the_title(); ?></h1>
-                          
-                                <!-- TOP META : AUTHOR / TIME / COMMENTS -->
-                                <?php get_template_part( 'cfg/templates/meta' ); ?>
+                                <!-- Display the Post's content in a div box. -->
 
-                                <!-- CONTENT -->
-                                <?php the_content(); ?>
+                                <div class="entry">
+                                    <?php the_content(); ?>
+                                </div>
 
-                                <div class="clearfix"></div>
-
-                                <?php get_template_part( 'cfg/templates/bottom-meta' ); ?>
+                                <hr>
                             </article>
-
-                            <!-- COMMENTS -->
-                            <?php comments_template(); ?>
 
                 <?php
                         } /* END ARTICLE */
                     }
                 ?>
 
-                <?php
-                    /* RIGHT WRAPPER */
-                    $myThemes_layout ->  contentWrapper( 'right' );
-                ?>
 
                 </section>
-
-            <?php
-                /* RIGHT SIDEBAR */
-                $myThemes_layout -> echoSidebar( 'right' );
-            ?>
             
             </div>
         </div>
