@@ -124,8 +124,48 @@
                     get_template_part( 'cfg/templates/loop' );
                 }
             ?>
+
             </div>
         </div>
     </div>
+
+
+        <div id="blog" class="blog-front-page">
+                <div class="container">
+                    <div class="row">
+
+                        <h5 id="blog-front-page-h">Transformation Marathon</h5>
+                        <h1 id="blog-front-page-h"><a href="/blog">Live Blog</a></h1>
+
+                        <?php
+
+
+                        $args = array( 'posts_per_page' => 1, 'category' => 7 );
+
+                        $myposts = get_posts( $args );
+                        foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                            <article>
+                                <div class="header-block">
+                                    <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+                                    <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
+
+                                    <h5>by <?php the_author_firstname(); ?> <?php the_author_lastname(); ?> &#8212; <?php the_time('j F Y'); ?></h5>
+                                </div>
+
+                                <!-- Display the Post's content in a div box. -->
+
+                                <div class="entry">
+                                    <?php the_content(); ?>
+                                </div>
+
+                            </article>
+                        <?php endforeach; 
+                        wp_reset_postdata();?>
+
+                    </div>
+                </div>
+            </div>
+
 
 <?php get_footer(); ?>

@@ -172,6 +172,10 @@ code {
     color: #333;
 }
 
+a, a:hover, a:focus, a:visited, a:active {
+    text-decoration: none;
+}
+
 
 /******************
 HEADER
@@ -742,4 +746,18 @@ p.srp-post-date {
 
 #blog-page #text-weather {
     color: #000;
+}
+.blog-front-page {
+    padding-top: 100px;
+    background: #eee;
+}
+.blog-front-page article {
+    margin-bottom: 200px !important;
+}
+h1#blog-front-page-h a, h5#blog-front-page-h {
+    color:#4696ff;
+}
+
+#blog-page header {
+    min-height: auto;
 }
