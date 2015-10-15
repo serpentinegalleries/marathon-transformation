@@ -172,11 +172,6 @@ code {
     color: #333;
 }
 
-a, a:hover, a:focus, a:visited, a:active {
-    text-decoration: none;
-}
-
-
 /******************
 HEADER
 ******************/
@@ -574,7 +569,36 @@ PARTICIPANTS
 .participant-title {
     cursor: pointer;
 }
-
+#participants-a-i {
+    cursor: pointer;
+}
+#participants-j-s {
+    display: none;    
+    cursor: pointer;
+}
+#participants-t-z {
+    display: none;
+    cursor: pointer;
+}
+#participants-all {
+    cursor: pointer;
+}
+#participants-a-i-link {
+    cursor: pointer;
+}
+#participants-j-s-link {
+    cursor: pointer;
+}
+#participants-t-z-link {
+    cursor: pointer;
+}
+.participants-links {
+    margin-top: 100px;
+    margin-bottom: -20px;
+}
+.participants-active {
+    text-decoration: underline;
+}
 /**************
 Schedule
 **************/
