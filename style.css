@@ -599,6 +599,9 @@ PARTICIPANTS
 .participants-active {
     text-decoration: underline;
 }
+.participants-inactive {
+    text-decoration: none;
+}
 /**************
 Schedule
 **************/
@@ -760,6 +763,7 @@ p.srp-post-date {
     color: #000 !important;
     text-align: center !important;
     margin: 15px 0;
+    font-family: 'gt_walsheimbold';
 }
 
 #blog p img {
