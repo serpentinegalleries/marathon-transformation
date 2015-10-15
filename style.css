@@ -812,3 +812,28 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
 .participant-up {
     display: none;
 }
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-family: 'gt_walsheimbold';
+        font-size: 36px !important;
+        line-height: 40px;
+        margin-bottom: 20px;  
+    }
+    h2 {
+        font-family: 'gt_walsheimthin';
+        font-size: 36px !important;
+        line-height: 40px;  
+        margin-bottom:40px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #player i {
+        display: none;
+    }
+    .participant-text {
+        width: 90% !important;
+    }
+}
