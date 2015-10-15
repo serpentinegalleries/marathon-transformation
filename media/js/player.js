@@ -87,7 +87,7 @@ var hourScale = d3.scale.linear()
 
 	initializeDaysClock('saturdayDays', saturday);
 
-	/* Day 1 Countdown text
+	/* Day 1 Countdown text */
 	video.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 29)
@@ -97,7 +97,7 @@ var hourScale = d3.scale.linear()
 		 .attr("class", "countdown")
 		 .attr("id", "saturdayHours")
 
-	initializeHoursClock('saturdayHours', saturday);*/
+	initializeHoursClock('saturdayHours', saturday);
 
 	video.append("svg:text")
 		 .attr("x", 0)
@@ -163,7 +163,7 @@ var hourScale = d3.scale.linear()
 
 	initializeDaysClock('sundayDays', sunday);
 
-	/*radio.append("svg:text")
+	radio.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 29)
 		 .style("fill", "#FFF")
@@ -172,7 +172,7 @@ var hourScale = d3.scale.linear()
 		 .attr("class", "countdown")
 		 .attr("id", "sundayHours");
 
-	initializeHoursClock('sundayHours', sunday);*/
+	initializeHoursClock('sundayHours', sunday);
 
 
 //... and hours
@@ -244,7 +244,7 @@ Resize player
 ALTERNATE TEXT
 *************/
 
-	video.append("svg:text")
+	/*video.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 0)
 		 .style("fill", "#FFF")
@@ -260,9 +260,9 @@ ALTERNATE TEXT
 		 .attr("stroke-width", -1)
 		 .attr("text-anchor", "middle")
 		 .attr("class", "title")
-		 .text("The Last Silent Movie");
+		 .text("The Last Silent Movie");*/
 
-	video.append("svg:text")
+	/*video.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 95)
 		 .style("fill", "#FFF")
@@ -271,7 +271,7 @@ ALTERNATE TEXT
 		 .attr("text-anchor", "middle")
 		 .attr("id", "watch")
 		 .text("watch")
-		 .on("click", function() { $("#livestream").modal("show"); });
+		 .on("click", function() { $("#livestream").modal("show"); });*/
 
 
 	// Use transition.call
@@ -281,7 +281,7 @@ ALTERNATE TEXT
 	videoForeground.transition()
 	    .duration(100)
 	    .call(arcTween, hourVar * τ);
-	}, 1500);*/
+	}, 1500);
 
 
 	radio.append("svg:text")
@@ -293,7 +293,7 @@ ALTERNATE TEXT
 		 .attr("class", "name")
 		 .text("listen");
 
-/*
+	/*
 	setInterval(function() {
 	radioForeground.transition()
 	    .duration(d3.time.minute)
@@ -318,6 +318,5 @@ ALTERNATE TEXT
 
 	$('#livestream').on('hidden.bs.modal', function () {
         $('#livestream iframe').attr("src", jQuery("#livestream iframe").attr("src"));
-        //callPlayer('yt-player', 'stopVideo');
     });
 });
