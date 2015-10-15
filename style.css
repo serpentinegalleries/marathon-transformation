@@ -220,11 +220,6 @@ nav.base-nav ul li:hover > a, nav.base-nav ul li:hover > a:active, nav.base-nav 
     color: #969696 !important;
     text-decoration: none !important;
 }
-/* Header image */
-.mythemes-header {
-    min-height: 700px;
-    padding-bottom: 100px;
-}
 
 
 /******************
@@ -346,29 +341,33 @@ PLAYER VISUALISAION
     text-align: center;
     color: #FFF !important;
 }
-
 #player .container {
-    width: 80%;
+    width: 100%;
+    max-height: 100%;
     display: block;
     margin: 0 auto;
 }
-
-#player .row {
-    margin-bottom: 100px;
+#player .col-lg-4 {
+    max-height: 100%;
 }
-
+#player .col-sm-12 {
+    min-height: 100%;
+}
+#player .row {
+    max-height: 100%;
+}
 #player .container svg {
     width: 100%;
     display: block;
     margin: 0 auto;
+    max-height: 70vh;
 }
-
 #videoText {
     display: block;
     text-align: center;
     vertical-align: middle;
+    margin-bottom: 15px;
 }
-
 #player .countdown {
     /* H2 style */
     font-family: 'gt_walsheimthin';
@@ -377,9 +376,13 @@ PLAYER VISUALISAION
     margin-top: 15px;
     margin-bottom: 40px;
     color: #FFF !important;
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
+    -ms-font-feature-settings: 'tnum';
 }
 
-.status {
+#player .status {
+    /* H2 style */
     font-family: 'gt_walsheimbold';
     font-size: 14px;
     line-height: 18px;
@@ -388,24 +391,75 @@ PLAYER VISUALISAION
     color: #FFF !important;
 }
 #player .name {
-    /* h5 style */
     font-family: 'gt_walsheimbold';
     font-size: 24px;
     line-height: 29px;  
 }
 #player .title {
-    /* h3 style */
     font-family: 'gt_walsheimthin';
     font-size: 24px;
     line-height: 29px;  
 }
 
-#player #watch {
-    /* h5 style */
+#videoPlayer {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-height: 100%;
+}
+
+#radioPlayer {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+}
+
+#player {
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;    
+}
+.date-text {
     font-family: 'gt_walsheimbold';
+    font-size: 36px;
+    line-height: 40px;
+}
+.description-text {
+    font-family: 'gt_walsheimthin';
     font-size: 24px;
-    line-height: 29px;
-    cursor: pointer;
+    line-height: 29px;  
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 /*******************
 WEATHER ICONS
