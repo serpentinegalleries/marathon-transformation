@@ -9,16 +9,16 @@
 						  viewBox="0 0 410 600"
 						  preserveAspectRatio="xMidYMid">
 						</svg>
-		 </div>
-		 <div id="radio" class="col-lg-4 col-md-4 col-sm-12">
-		 	<div id="radioPlayer">
-	 			<div id="videoText">from 12AM to 12PM
-	 			</div>
+				 </div>
+				 <div id="radio" class="col-lg-4 col-md-4 col-sm-12">
+			 			<div id="videoText">from 12AM to 12PM
+			 			</div>
 
-				<svg id="radio-viz"
-			  		viewBox="0 0 410 600"
-			  		preserveAspectRatio="xMidYMid">
-		 </div>
+						<svg id="radio-viz"
+					  		viewBox="0 0 410 600"
+					  		preserveAspectRatio="xMidYMid">
+				 </div>
+				 <a href="/#about"><i class="fa fa-chevron-down fa-2x"></i></a>
 	  </div>
    </div>
 </div>

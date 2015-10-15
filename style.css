@@ -415,6 +415,19 @@ PLAYER VISUALISAION
     max-height: 100%;
 }
 
+#player i {
+    position: absolute;
+    display: block;
+    width: 10%;
+    left: 45%;
+    bottom: 0;
+    padding-bottom: 15px;
+    color: #FFF;
+    opacity: .5;
+}
+#player i:hover {
+    opacity: .8;
+}
 #player {
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 5s; /* Firefox < 16 */
