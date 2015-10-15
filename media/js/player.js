@@ -242,7 +242,7 @@ Resize player
 
 /**************
 ALTERNATE TEXT
-**************/
+*************
 
 	video.append("svg:text")
 		 .attr("x", 0)
@@ -315,6 +315,6 @@ ALTERNATE TEXT
 	});
 	}
 
-
+*/
 
 });
