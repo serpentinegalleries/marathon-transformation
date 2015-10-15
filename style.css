@@ -661,7 +661,7 @@ p.srp-post-date {
 }
 
 #blog a:hover {
-    color: #eee;
+    color: #969696;
 }
 
 #blog .header-block {
@@ -684,4 +684,8 @@ p.srp-post-date {
     width: 130%;
     height: auto;
     margin: 15px -15%;
+}
+
+#blog-page #text-weather {
+    color: #000;
 }

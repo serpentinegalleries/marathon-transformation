@@ -18,7 +18,7 @@
 
                                     <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
 
-                                    <h5>by <?php the_author_posts_link(); ?> &#8212; <?php the_time('j F Y'); ?></h5>
+                                    <h5>by <?php the_author_firstname(); ?> <?php the_author_lastname(); ?> &#8212; <?php the_time('j F Y'); ?></h5>
                                 </div>
 
                                 <!-- Display the Post's content in a div box. -->
