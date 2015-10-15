@@ -526,7 +526,8 @@ PARTICIPANTS
     font-family: 'gt_walsheimbold';
 }
 .participants-list .share, .participants-list .participant-hide {
-    text-align: center;    
+    text-align: center;
+    padding-top: 20px;
 }
 .participants-list .share a {
     color: #969696;
@@ -793,4 +794,8 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
 .anchor {
     position: absolute;
     top: 0;
+}
+
+.participant-up {
+    display: none;
 }

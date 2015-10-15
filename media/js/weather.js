@@ -140,6 +140,9 @@ function setWindIconBlack(wind_direction) {
 
 		$participant.find('.participant-body').toggle(700);
 
+		$participant.find('.participant-up').toggle(700);
+		$participant.find('.participant-down').toggle(700);
+
 
 	});
 
