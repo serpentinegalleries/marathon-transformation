@@ -1,3 +1,9 @@
+        <div id="supporters">
+            <div class="container">  
+                <img src="/wp-content/themes/transformation/media/img/supporters_white.svg">
+            </div>
+        </div>
+
         <footer>
             <?php
                 ob_start();
@@ -187,7 +193,6 @@
 
                     </div>
                     <div class="row">
-                        <img id="supporters" src="/wp-content/themes/transformation/media/img/marathon_supporters.svg">
                     </div>  
                 </div>
             </div>
