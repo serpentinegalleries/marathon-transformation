@@ -46,9 +46,9 @@
                 <div class="container">
                     <div id="logo-animation" class="row">
                         <video width="378" height="auto" autoplay>
-                          <source src="/wp-content/themes/transformation/media/img/animation/BLACK-BG-transformation-marathon.mp4" type="video/mp4">
-                          <source src="/wp-content/themes/transformation/media/img/animation/BLACK-BG-transformation-marathon.ogg" type="video/ogg">
-                          <source src="/wp-content/themes/transformation/media/img/animation/BLACK-BG-transformation-marathon.webm" type="video/webm">
+                          <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P" type="video/mp4">
+                          <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P" type="video/ogg">
+                          <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.webm" type="video/webm">
                           <h5>Your browser does not support the video tag.</h5>
                         </video>
                     </div>
