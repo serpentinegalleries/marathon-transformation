@@ -172,6 +172,9 @@ var hourScale = d3.scale.linear()
 		 .attr("class", "countdown")
 		 .attr("id", "sundayHours");
 
+	var t = getTimeRemaining(sunday);
+	var clockElem = document.getElementById('sundayHours');
+	clockElem.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
 	initializeHoursClock('sundayHours', sunday);
 
 

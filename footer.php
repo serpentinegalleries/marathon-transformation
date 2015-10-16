@@ -45,11 +45,11 @@
             <div class="mythemes-copyright">
                 <div class="container">
                     <div id="logo-animation" class="row">
-                        <video width="378" height="auto" autoplay>
+                        <video width="378" height="auto" autoplay loop>
                           <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P" type="video/mp4">
                           <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P" type="video/ogg">
                           <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.webm" type="video/webm">
-                          <h5>Your browser does not support the video tag.</h5>
+                          <img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo_black.svg">
                         </video>
                     </div>
                     <div class="row">
