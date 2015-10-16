@@ -861,6 +861,9 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     #navigation {
         margin-bottom: 75px;
     }
+    #player i {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -879,9 +882,6 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     p {
         font-size: 18px;
         line-height: 24px;
-    }
-    #player i {
-        display: none;
     }
     .participant-text {
         width: 90% !important;
