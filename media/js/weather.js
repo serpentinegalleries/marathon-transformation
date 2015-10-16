@@ -193,9 +193,8 @@ function setWindIconBlack(wind_direction) {
 	});
 
 	if ($(window).width() < 540) {
-		$('#supporters').attr('src', "/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
+		$('img#supporter-block').attr('src', "/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
 	}
-
 
 	$('a#participants-a-i-link').on('click', function () {
 		$('a.participants-active').removeClass("participants-active");

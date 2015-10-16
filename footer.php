@@ -1,6 +1,6 @@
         <div id="supporters">
             <div class="container">  
-                <img src="/wp-content/themes/transformation/media/img/supporters_white.svg">
+                <img id="supporter-block" src="/wp-content/themes/transformation/media/img/supporters_white.svg">
             </div>
         </div>
 
