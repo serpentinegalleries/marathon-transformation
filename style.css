@@ -250,6 +250,10 @@ footer img {
     max-width: 100%;
 }
 
+footer .container {
+    max-width: 100%;
+}
+
 #supporters {
     background: #fff;
     width: 100%;
@@ -345,6 +349,8 @@ SECTIONS
 }
 .textwidget p b {
     font-family: 'gt_walsheimbold';
+    font-size: 22px;
+    line-height: 35px;
 }
 .textwidget h1,
 .textwidget h2,
