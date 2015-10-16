@@ -674,8 +674,8 @@ PARTICIPANTS
     cursor: pointer;
 }
 .participants-links {
-    margin-top: -100px;
-    margin-bottom: -100px;
+    margin-top: 100px;
+    margin-bottom: -200px;
 }
 .participants-active {
     text-decoration: underline;
