@@ -90,6 +90,10 @@ TYPOGRAPHY
     font-weight: normal;
     font-style: normal;
 }
+html, body, p, a, h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
 p {
     font-family: 'surveyor_textlight' !important;
 }
@@ -187,7 +191,7 @@ HEADER
     padding-top: 0;
 }
 nav.header-nav {
-    padding-top: 55px !important;
+    padding-top: 53px !important;
     padding-bottom: 0px !important
 }
 /* Nav links */
@@ -300,7 +304,6 @@ SECTIONS
     padding-top: 50px;
     padding-bottom: 100px;
 }
-
 .front-page-section-highlight p {
     color: #FFF !important;
 }
@@ -315,13 +318,32 @@ SECTIONS
 .front-page-section-highlight h1 {
     text-align: center;
 }
-
 .textwidget {
     width: 65%;
     display: block;
     margin: 0 auto;
-    padding: 75px 0;
+    padding: 100px 0;
     text-align: center;
+}
+.textwidget p {
+    color: #000 !important;
+    text-align: left;
+    line-height: 35px !important;
+    font-weight: 300 !important;
+}
+.textwidget p b {
+    font-family: 'gt_walsheimbold';
+}
+.textwidget h1,
+.textwidget h2,
+.textwidget h3,
+.textwidget h4,
+.textwidget h5,
+.textwidget h6 {
+    color: #4696ff;
+}
+.textwidget h5 {
+    font-size: 16px;
 }
 .widget-title {
     display: none;
@@ -683,6 +705,7 @@ Schedule
     opacity: .5;
 }
 h5#programme {
+    font-size: 16px;
     text-align: center !important;
 }
 h1#programme {
@@ -843,9 +866,6 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     display: none;
 }
 @media screen and (max-width: 1200px) {
-    nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
-        font-size: 14px !important;
-    }
     header .tm-logo {
         display: block !important;
         width: 338px;
