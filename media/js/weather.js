@@ -201,7 +201,7 @@ function setWindIconBlack(wind_direction) {
 		$('a.participants-active').removeClass("participants-active");
 		$(this).attr("class", "participants-active");
 
-		$('#participants-a-i').fadeIn(1000);
+		$('#participants-a-i').slideToggle(1000);
 		$('#participants-j-s').hide();
 		$('#participants-t-z').hide();
 
@@ -210,7 +210,7 @@ function setWindIconBlack(wind_direction) {
 	$('a#participants-j-s-link').on('click', function () {
 		$('a.participants-active').removeClass("participants-active");
 		$(this).attr("class", "participants-active");
-		$('#participants-j-s').fadeIn(1000);
+		$('#participants-j-s').slideToggle(1000);
 		$('#participants-a-i').hide();
 		$('#participants-t-z').hide();
 
@@ -219,7 +219,7 @@ function setWindIconBlack(wind_direction) {
 	$('a#participants-t-z-link').on('click', function () {
 		$('a.participants-active').removeClass("participants-active");
 		$(this).attr("class", "participants-active");
-		$('#participants-t-z').fadeIn(1000);
+		$('#participants-t-z').slideToggle(1000);
 		$('#participants-a-i').hide();
 		$('#participants-j-s').hide();
 
@@ -228,9 +228,9 @@ function setWindIconBlack(wind_direction) {
 	$('a#participants-all').on('click', function () {
 		$('a.participants-active').removeClass("participants-active");
 		$(this).attr("class", "participants-active");
-		$('#participants-a-i').fadeIn(1000);
-		$('#participants-j-s').fadeIn(1000);
-		$('#participants-t-z').fadeIn(1000);
+		$('#participants-a-i').slideToggle(1000);
+		$('#participants-j-s').show(1000);
+		$('#participants-t-z').show(1000);
 
 	});
 
