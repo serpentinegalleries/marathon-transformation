@@ -590,7 +590,7 @@ PARTICIPANTS
     width: 65%;
     display: block;
     margin: 0 auto;
-    padding: 50px 0 50px 0;
+    padding: 40px 0 40px 0;
     cursor: pointer;
 }
 .participants-list a:visited, .participants-list a:active, .participants-list a:focus {
@@ -874,7 +874,7 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
 
 .anchor {
     position: absolute;
-    top: 0;
+    margin-top: -100px;
 }
 
 .participant-up {
