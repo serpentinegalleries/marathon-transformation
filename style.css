@@ -569,6 +569,10 @@ WEATHER ICONS
 PARTICIPANTS
 *****************/
 
+.participants-list {
+    min-height: 500px;
+}
+
 .participants-list p,
 .participants-list h1,
 .participants-list h2,
@@ -579,7 +583,10 @@ PARTICIPANTS
  {
     text-align: left;
 }
-
+.participants-alphabet .textwidget {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
 .participants-list a {
     color: #000;    
 }
@@ -607,7 +614,7 @@ PARTICIPANTS
 }
 .participants-list .share, .participants-list .participant-hide {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 .participants-list .share a {
     color: #969696;
@@ -633,6 +640,7 @@ PARTICIPANTS
 }
 .participant-menu h5 {
     text-align: center;
+    font-size: 
 }
 .participant-menu h5 a {
     color: #000 !important;
@@ -673,9 +681,8 @@ PARTICIPANTS
 #participants-t-z-link {
     cursor: pointer;
 }
-.participants-links {
-    margin-top: 100px;
-    margin-bottom: -200px;
+.participants-links h5 {
+    font-size: 24px;
 }
 .participants-active {
     text-decoration: underline;
@@ -944,5 +951,13 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     nav.base-nav ul.mythemes-menu {
         background: transparent !important;
         border: none !important;
+    }
+    .participant-text h5 {
+        font-size: 24px;
+        line-height: 29px; 
+    }
+    #schedule h5 {
+        font-size: 24px;
+        line-height: 29px; 
     }
 }
