@@ -876,7 +876,9 @@ p.srp-post-date {
 h1#blog-front-page-h a, h5#blog-front-page-h {
     color:#4696ff;
 }
-
+h5#blog-front-page-h {
+    font-size: 16px;
+}
 #blog-page header {
     min-height: auto;
 }
