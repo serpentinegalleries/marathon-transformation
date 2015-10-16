@@ -233,8 +233,8 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
     display: block;
 }
 .tm-logo {
-    max-width: 338px;
-    width: 100%;
+    width: 338px;
+    max-width: 100%;
     margin-top: 40px;
 }
 footer {
@@ -912,6 +912,13 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     }
     .participant-text {
         width: 90% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    nav.base-nav ul.mythemes-menu {
+        background: transparent !important;
+        border: none !important;
     }
 }
 
