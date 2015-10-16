@@ -296,6 +296,7 @@ article {
 }
 hr {
     border-top: 1px solid #969696 !important;
+    margin: 0 !important;
 }
 
 a:focus {
@@ -308,8 +309,7 @@ SECTIONS
 ******************/
 
 .front-page-section-highlight {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 50px;
 }
 .front-page-section-highlight p {
     color: #FFF !important;
@@ -333,7 +333,8 @@ SECTIONS
     width: 65%;
     display: block;
     margin: 0 auto;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
 }
 .textwidget p {

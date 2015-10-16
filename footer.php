@@ -48,7 +48,7 @@
                         <img class="footer-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
                     </div>
                     <div class="row">
-                        <img class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.png">
+                        <img class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-6">
