@@ -239,7 +239,7 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
 }
 footer {
     background: #000;
-    padding: 40px 50px !important;
+    padding: 0 50px 40px 50px !important;
 }
 .mythemes-copyright {
     background: #000 !important;
@@ -906,6 +906,10 @@ h5#blog-front-page-h {
     position: absolute;
 }
 
+#logo-animation video {
+    max-width: 100%;
+}
+
 /** IMAGE SECTIONS **/
 
 .so-widget-sow-image .so-widget-sow-image-base img {
@@ -1002,5 +1006,22 @@ h5#blog-front-page-h {
     h4 {
         font-size: 24px !important;
         line-height: 29px !important; 
+    }
+    #logo-animation video {
+        display: block;
+        margin: 0 auto;
+    }
+    #blog img {
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+    #logo-animation video {
+        display: block;
+        margin: 0 auto;
     }
 }

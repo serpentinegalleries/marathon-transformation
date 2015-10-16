@@ -44,8 +44,13 @@
 
             <div class="mythemes-copyright">
                 <div class="container">
-                    <div class="row">
-                        <img class="footer-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
+                    <div id="logo-animation" class="row">
+                        <video width="378" height="auto" autoplay>
+                          <source src="/wp-content/themes/transformation/media/img/animation/BLACK-BG-transformation-marathon.mp4" type="video/mp4">
+                          <source src="/wp-content/themes/transformation/media/img/animation/BLACK-BG-transformation-marathon.ogg" type="video/ogg">
+                          <source src="/wp-content/themes/transformation/media/img/animation/BLACK-BG-transformation-marathon.webm" type="video/webm">
+                          <h5>Your browser does not support the video tag.</h5>
+                        </video>
                     </div>
                     <div class="row">
                         <img class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
