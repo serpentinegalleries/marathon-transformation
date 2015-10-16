@@ -707,7 +707,9 @@ Schedule
     font-size: 36px;
     line-height: 40px;
 }
-
+#schedule b, #schedule strong {
+    font-family: 'gt_walsheimbold';
+}
 #schedule a {
     color: #FFF;
 }
@@ -921,26 +923,26 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     h1 {
         font-family: 'gt_walsheimbold';
         font-size: 36px !important;
-        line-height: 40px;
-        margin-bottom: 20px;  
+        line-height: 40px !important;
+        margin-bottom: 20px !important;  
     }
     h2 {
         font-family: 'gt_walsheimthin';
         font-size: 36px !important;
-        line-height: 40px;  
-        margin-bottom:40px;
+        line-height: 40px !important;  
+        margin-bottom:40px !important;
     }
     h3 {
-        font-size: 24px;
-        line-height: 29px; 
+        font-size: 24px !important;
+        line-height: 29px !important; 
     }
     h4 {
-        font-size: 24px;
-        line-height: 29px; 
+        font-size: 24px !important;
+        line-height: 29px !important; 
     }
     p {
         font-size: 16px !important;
-        line-height: 20px;
+        line-height: 20px !important;
     }
     .participant-text {
         width: 90% !important;
@@ -959,5 +961,32 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     #schedule h5 {
         font-size: 24px;
         line-height: 29px; 
+    }
+    .textwidget p {
+        line-height: 20px !important;
+    }
+    .textwidget {
+        width: 80%;
+    }
+    #blog p {
+        width: 100%;
+    }
+    h1 {
+        font-family: 'gt_walsheimbold';
+        font-size: 24px !important;
+        line-height: 29px !important; 
+    }
+    h2 {
+        font-family: 'gt_walsheimthin';
+        font-size: 24px !important;
+        line-height: 29px !important; 
+    }
+    h3 {
+        font-size: 24px !important;
+        line-height: 29px !important; 
+    }
+    h4 {
+        font-size: 24px !important;
+        line-height: 29px !important; 
     }
 }
