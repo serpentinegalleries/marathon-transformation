@@ -88,16 +88,19 @@ var hourScale = d3.scale.linear()
 	initializeDaysClock('saturdayDays', saturday);
 
 	/* Day 1 Countdown text */
-	/*video.append("svg:text")
+	video.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 29)
 		 .style("fill", "#FFF")
 		 .attr("text-anchor", "middle")
 		 .attr("stroke-width", -1)
 		 .attr("class", "countdown")
-		 .attr("id", "saturdayHours")*/
+		 .attr("id", "saturdayHours")
 
-	//initializeHoursClock('saturdayHours', saturday);
+	var tH = getTimeRemaining(saturday);
+	var clockElem0 = document.getElementById('saturdayHours');
+	clockElem0.innerHTML = (tH.hours<10?'0':'') + tH.hours + ":" + (tH.minutes<10?'0':'') + tH.minutes + ":" + (tH.seconds<10?'0':'') + tH.seconds;
+	initializeHoursClock('saturdayHours', saturday);
 
 	video.append("svg:text")
 		 .attr("x", 0)
@@ -265,14 +268,15 @@ ALTERNATE TEXT
 		 .attr("class", "title")
 		 .text("The Last Silent Movie");*/
 
-	video.append('text')
+/*	video.append('text')
 		 .attr("x", -70)
 		 .attr("y", 20)
 	    .attr('font-family', 'FontAwesome')
 	    .style("fill", "#FFF")
 	    .attr("font-size", "20px")
 	    .attr("id", "play-icon")
-	    .text(function(d) { return '\uf04b' }); 
+	    .text(function(d) { return '\uf04b' })
+		 .on("click", function() { $("#livestream").modal("show"); });
 
 	video.append("svg:text")
 		 .attr("x", 17)
@@ -283,13 +287,13 @@ ALTERNATE TEXT
 		 .attr("text-anchor", "middle")
 		 .attr("id", "watch")
 		 .text("watch live")
-		 .on("click", function() { $("#livestream").modal("show"); });
+		 .on("click", function() { $("#livestream").modal("show"); });*/
 
 
 	// Use transition.call
 	// (identical to selection.call) so that we can encapsulate the logic for
 	// tweening the arc in a separate function below.
-	/*setInterval(function() {
+	setInterval(function() {
 	videoForeground.transition()
 	    .duration(100)
 	    .call(arcTween, hourVar * τ);
