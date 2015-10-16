@@ -186,31 +186,17 @@ HEADER
     padding-bottom: 0;
     padding-top: 0;
 }
-header hgroup {
-    text-align: left !important;
-    padding-bottom: 0 !important;
-}
-header hgroup img {
-    max-width: 338px;
-}
-header hgroup a {
-    color: #FFF !important;
-    font-family: 'gt_walsheimbold' !important;
-}
-header hgroup a:hover, header hgroup a:focus, header hgroup a:active {
-    color: #969696 !important;
-    text-decoration: none !important;
-}
 nav.header-nav {
-    padding-top: 61px !important;
+    padding-top: 55px !important;
     padding-bottom: 0px !important
 }
 /* Nav links */
 nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
+    font-family: 'gt_walsheimbold' !important;
     color: #FFF !important;
     background: transparent !important;
+    font-size: 16px !important;
     text-transform: capitalize !important;
-    font-size: 14px !important;
     line-height: 18px !important;
     padding-right: 0 !important;
     padding-left: 20px !important; /*Review this */
@@ -219,6 +205,10 @@ nav.base-nav ul li:hover > a, nav.base-nav ul li:hover > a:active, nav.base-nav 
     color: #969696 !important;
     text-decoration: none !important;
 }
+nav.mythemes-nav-inline.base-nav {
+    border: none !important;
+}
+
 
 
 /******************
@@ -237,6 +227,11 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
     max-width: 338px;
     margin-bottom: 100px;
     display: block;
+}
+.tm-logo {
+    max-width: 338px;
+    width: 100%;
+    margin-top: 40px;
 }
 footer {
     background: #000;
@@ -847,8 +842,28 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
 .participant-up {
     display: none;
 }
+@media screen and (max-width: 1200px) {
+    nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
+        font-size: 14px !important;
+    }
+    header .tm-logo {
+        display: block !important;
+        width: 338px;
+        margin: 40px auto !important;
+    }
+    nav.header-nav {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        display: block;
+        margin: auto;
+        text-align: center !important;
+    }
+    #navigation {
+        margin-bottom: 75px;
+    }
+}
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
     h1 {
         font-family: 'gt_walsheimbold';
         font-size: 36px !important;
