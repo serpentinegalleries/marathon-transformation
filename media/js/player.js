@@ -88,16 +88,16 @@ var hourScale = d3.scale.linear()
 	initializeDaysClock('saturdayDays', saturday);
 
 	/* Day 1 Countdown text */
-	video.append("svg:text")
+	/*video.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 29)
 		 .style("fill", "#FFF")
 		 .attr("text-anchor", "middle")
 		 .attr("stroke-width", -1)
 		 .attr("class", "countdown")
-		 .attr("id", "saturdayHours")
+		 .attr("id", "saturdayHours")*/
 
-	initializeHoursClock('saturdayHours', saturday);
+	//initializeHoursClock('saturdayHours', saturday);
 
 	video.append("svg:text")
 		 .attr("x", 0)
@@ -265,16 +265,25 @@ ALTERNATE TEXT
 		 .attr("class", "title")
 		 .text("The Last Silent Movie");*/
 
-	/*video.append("svg:text")
-		 .attr("x", 0)
-		 .attr("y", 95)
+	video.append('text')
+		 .attr("x", -70)
+		 .attr("y", 20)
+	    .attr('font-family', 'FontAwesome')
+	    .style("fill", "#FFF")
+	    .attr("font-size", "20px")
+	    .attr("id", "play-icon")
+	    .text(function(d) { return '\uf04b' }); 
+
+	video.append("svg:text")
+		 .attr("x", 17)
+		 .attr("y", 20)
 		 .style("fill", "#FFF")
 		 .attr("stroke-width", -1)
 		 .attr("class", "name")
 		 .attr("text-anchor", "middle")
 		 .attr("id", "watch")
-		 .text("watch")
-		 .on("click", function() { $("#livestream").modal("show"); });*/
+		 .text("watch live")
+		 .on("click", function() { $("#livestream").modal("show"); });
 
 
 	// Use transition.call

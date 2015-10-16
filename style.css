@@ -432,6 +432,12 @@ PLAYER VISUALISAION
     font-size: 24px;
     line-height: 29px;  
 }
+#player #play-icon:hover {
+    cursor: pointer;
+}
+#player .name:hover {
+    cursor: pointer;
+}
 #player .title {
     font-family: 'gt_walsheimthin';
     font-size: 24px;
