@@ -138,14 +138,13 @@ function setWindIconBlack(wind_direction) {
 
 		$participant = $(this);
 
-		$participant.find('.participant-body').toggle(700);
+		$participant.find('.participant-body').slideToggle(400);
 
-		$participant.find('.participant-up').toggle(700);
-		$participant.find('.participant-down').toggle(700);
+		$participant.find('.participant-up').toggle();
+		$participant.find('.participant-down').toggle();
 
 
 	});
-
 
 	/*$('.participant-title').on('click', function () {
 
