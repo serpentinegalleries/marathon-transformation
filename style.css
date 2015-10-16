@@ -898,6 +898,12 @@ h1#blog-front-page-h a, h5#blog-front-page-h {
     position: absolute;
 }
 
+/** IMAGE SECTIONS **/
+
+.so-widget-sow-image .so-widget-sow-image-base img {
+    min-width: 100vw;
+}
+
 @media screen and (max-width: 1200px) {
     header .tm-logo {
         display: block !important;
