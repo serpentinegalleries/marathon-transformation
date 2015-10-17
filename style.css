@@ -539,8 +539,8 @@ PLAYER VISUALISAION
 }
 #livestream img {
     position: absolute;
-    top: 40px;
-    left: 50px;
+    top: 20px;
+    left: 20px;
     z-index: 500000;
 }
 #close-frame {
@@ -844,6 +844,14 @@ p.srp-post-date {
 #blog iframe {
     max-width: 100%;
 }
+#read-more {
+    display: block;
+    width: 200px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #blog h1,
 #blog h2,
@@ -934,7 +942,6 @@ h5#blog-front-page-h {
     border: 0;
     position: absolute;
 }
-
 #logo-animation video {
     max-width: 100%;
 }
@@ -997,6 +1004,9 @@ header #logo-animation {
     }
     .participant-text {
         width: 90% !important;
+    }
+    #close-frame {
+        font-size: 40px;
     }
 }
 

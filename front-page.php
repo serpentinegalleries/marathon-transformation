@@ -158,6 +158,7 @@
                                 <?php the_content(); ?>
                             </div>
 
+                            <a href="/blog"><img id="read-more" src="/wp-content/themes/transformation/media/img/icon_readmore.svg"></a>
                         </article>
                     <?php endforeach; 
                     wp_reset_postdata();?>
