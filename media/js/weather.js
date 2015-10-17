@@ -196,6 +196,8 @@ function setWindIconBlack(wind_direction) {
 
 	if ($(window).width() < 540) {
 		$('img#supporter-block').attr('src', "/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
+		$('footer #logo-animation').html('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg');
+		$('header #logo-animation').html('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo_black.svg');
 	}
 
 	$('a#participants-a-i-link').on('click', function () {

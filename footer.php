@@ -49,13 +49,13 @@
                           <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.mp4" type="video/mp4">
                           <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.ogg" type="video/ogg">
                           <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.webm" type="video/webm">
-                          <img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo_black.svg">
+                          <img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
                         </video>
                     </div>
                     <div class="row">
                         <a href="http://serpentinegalleries.org/" target="_blank">
                         <img class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
-                        </a>
+                        </a>    
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-6">
