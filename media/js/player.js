@@ -39,6 +39,11 @@ jQuery(document).ready(function( $ ) {
 	    clock.innerHTML = "-" + t.days+ " DAY";
 	}
 
+	var saturday_end = 'October 17 2015 22:00:00 GMT+01:00';
+	timeLeft = getTimeRemaining(saturday_end);
+
+	var saturdayArc = (timeLeft.hours)*60 + timeLeft.minutes;
+	saturdayArc = (720 - saturdayArc) / 720;
 
 /**********
 PLAYER
@@ -76,31 +81,60 @@ var hourScale = d3.scale.linear()
 	  .attr("opacity",".5")
 	  .attr("d", arc);
 
-	video.append("svg:text")
+	if (saturdayArc > 0) {
+		var videoForeground = video.append("path")
+		  .datum({endAngle: τ * saturdayArc})
+		  .style("fill", "#FFF")
+		  .attr("opacity","1")
+		  .attr("d", arc);
+
+		video.append('text')
+		 .attr("x", -70)
+		 .attr("y", 20)
+	    .attr('font-family', 'FontAwesome')
+	    .style("fill", "#FFF")
+	    .attr("font-size", "20px")
+	    .attr("id", "play-icon")
+	    .text(function(d) { return '\uf04b' })
+		 .on("click", function() { $("#livestream").modal("show"); });
+
+		video.append("svg:text")
+		 .attr("x", 17)
+		 .attr("y", 20)
+		 .style("fill", "#FFF")
+		 .attr("stroke-width", -1)
+		 .attr("class", "name")
+		 .attr("text-anchor", "middle")
+		 .attr("id", "watch")
+		 .text("watch live")
+		 .on("click", function() { $("#livestream").modal("show"); });
+
+		 video.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", -100)
 		 .style("fill", "#FFF")
 		 .attr("stroke-width", -1)
 		 .attr("text-anchor", "middle")
 		 .attr("class", "status")
-		 .attr("id", "saturdayDays")
-
-	initializeDaysClock('saturdayDays', saturday);
+		 .text("ON AIR");
+	}
 
 	/* Day 1 Countdown text */
-	video.append("svg:text")
-		 .attr("x", 0)
-		 .attr("y", 29)
-		 .style("fill", "#FFF")
-		 .attr("text-anchor", "middle")
-		 .attr("stroke-width", -1)
-		 .attr("class", "countdown")
-		 .attr("id", "saturdayHours")
+	if (saturdayArc < 0) {
+		video.append("svg:text")
+			 .attr("x", 0)
+			 .attr("y", 29)
+			 .style("fill", "#FFF")
+			 .attr("text-anchor", "middle")
+			 .attr("stroke-width", -1)
+			 .attr("class", "countdown")
+			 .attr("id", "saturdayHours")
 
-	var tH = getTimeRemaining(saturday);
-	var clockElem0 = document.getElementById('saturdayHours');
-	clockElem0.innerHTML = (tH.hours<10?'0':'') + tH.hours + ":" + (tH.minutes<10?'0':'') + tH.minutes + ":" + (tH.seconds<10?'0':'') + tH.seconds;
-	initializeHoursClock('saturdayHours', saturday);
+		var tH = getTimeRemaining(saturday);
+		var clockElem0 = document.getElementById('saturdayHours');
+		clockElem0.innerHTML = (tH.hours<10?'0':'') + tH.hours + ":" + (tH.minutes<10?'0':'') + tH.minutes + ":" + (tH.seconds<10?'0':'') + tH.seconds;
+		initializeHoursClock('saturdayHours', saturday);
+	}
 
 	video.append("svg:text")
 		 .attr("x", 0)
@@ -155,16 +189,6 @@ var hourScale = d3.scale.linear()
 	  .attr("d", arc);
 
 	// Day 1 Countdown text
-	radio.append("svg:text")
-		 .attr("x", 0)
-		 .attr("y", -100)
-		 .style("fill", "#FFF")
-		 .attr("stroke-width", -1)
-		 .attr("text-anchor", "middle")
-		 .attr("class", "status")
-		 .attr("id", "sundayDays");
-
-	initializeDaysClock('sundayDays', sunday);
 
 	radio.append("svg:text")
 		 .attr("x", 0)
@@ -181,7 +205,7 @@ var hourScale = d3.scale.linear()
 	initializeHoursClock('sundayHours', sunday);
 
 
-//... and hours
+	//... and hours
 	radio.selectAll('.hour-tick')
 		.data(d3.range(0,12)).enter()
 			.append('line')
@@ -250,57 +274,16 @@ Resize player
 ALTERNATE TEXT
 *************/
 
-	/*video.append("svg:text")
-		 .attr("x", 0)
-		 .attr("y", 0)
-		 .style("fill", "#FFF")
-		 .attr("stroke-width", -1)
-		 .attr("text-anchor", "middle")
-		 .attr("class", "name")
-		 .text("Susan Miller")
-
-	video.append("svg:text")
-		 .attr("x", 0)
-		 .attr("y", 29)
-		 .style("fill", "#FFF")
-		 .attr("stroke-width", -1)
-		 .attr("text-anchor", "middle")
-		 .attr("class", "title")
-		 .text("The Last Silent Movie");*/
-
-/*	video.append('text')
-		 .attr("x", -70)
-		 .attr("y", 20)
-	    .attr('font-family', 'FontAwesome')
-	    .style("fill", "#FFF")
-	    .attr("font-size", "20px")
-	    .attr("id", "play-icon")
-	    .text(function(d) { return '\uf04b' })
-		 .on("click", function() { $("#livestream").modal("show"); });
-
-	video.append("svg:text")
-		 .attr("x", 17)
-		 .attr("y", 20)
-		 .style("fill", "#FFF")
-		 .attr("stroke-width", -1)
-		 .attr("class", "name")
-		 .attr("text-anchor", "middle")
-		 .attr("id", "watch")
-		 .text("watch live")
-		 .on("click", function() { $("#livestream").modal("show"); });*/
-
 
 	// Use transition.call
 	// (identical to selection.call) so that we can encapsulate the logic for
 	// tweening the arc in a separate function below.
-	setInterval(function() {
-	videoForeground.transition()
-	    .duration(100)
-	    .call(arcTween, hourVar * τ);
-	}, 1500);
+	/*setInterval(function() {
+		videoForeground.datum({endAngle: τ * saturdayArc})
+	}, 1500);*/
 
 
-	radio.append("svg:text")
+	/*radio.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 95)
 		 .style("fill", "#FFF")
@@ -309,12 +292,12 @@ ALTERNATE TEXT
 		 .attr("class", "name")
 		 .text("listen");
 
-	/*
+	*/
 	setInterval(function() {
-	radioForeground.transition()
-	    .duration(d3.time.minute)
-	    .call(arcTween, halfdayVar * τ);
-	}, 1500);*/
+		videoForeground.transition()
+		    .duration(d3.time.minute)
+		    .call(arcTween, saturdayArc * τ);
+		}, 200000);
 
 
 	function arcTween(transition, newAngle) {

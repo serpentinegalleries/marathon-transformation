@@ -552,6 +552,10 @@ PLAYER VISUALISAION
     opacity: 1 !important;
 }
 
+#livestream img {
+    max-width: 80%;
+}
+
 /*******************
 WEATHER ICONS
 *******************/
