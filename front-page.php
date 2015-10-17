@@ -176,7 +176,7 @@
         <img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
         <button type="button" id="close-frame" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="modal-body" id="yt-player">
-                <iframe src="https://www.youtube.com/embed/TxqYaPWvujg?hd=1&rel=0&autohide=1&showinfo=0" id="youtube" name="youtube"></iframe>
+                <iframe src="https://www.youtube.com/embed/gMs73JPoWx8?hd=1&rel=0&autohide=1&showinfo=0" id="youtube" name="youtube"></iframe>
           </div>
     </div>
   </div>

@@ -53,7 +53,9 @@
                         </video>
                     </div>
                     <div class="row">
+                        <a href="http://serpentinegalleries.org/" target="_blank">
                         <img class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
+                        </a>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-6">
