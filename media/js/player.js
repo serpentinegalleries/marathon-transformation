@@ -22,11 +22,11 @@ jQuery(document).ready(function( $ ) {
 		};
 	}
 
-	function initializeHoursClock(id, endtime){
-	  var clock = document.getElementById(id);
+
+	function initializeHoursClock(svgEl, endtime){
 	  var timeinterval = setInterval(function(){
 	    var t = getTimeRemaining(endtime);
-	    clock.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
+	    svgEl.text((t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds);
 	    if(t.total<=0){
 	      clearInterval(timeinterval);
 	    }
@@ -121,7 +121,7 @@ var hourScale = d3.scale.linear()
 
 	/* Day 1 Countdown text */
 	if (saturdayArc < 0) {
-		video.append("svg:text")
+		var saturdayCountdown = video.append("svg:text")
 			 .attr("x", 0)
 			 .attr("y", 29)
 			 .style("fill", "#FFF")
@@ -134,7 +134,7 @@ var hourScale = d3.scale.linear()
 		var clockElem0 = document.getElementById('saturdayHours');
 		clockElem0.innerHTML = (tH.hours<10?'0':'') + tH.hours + ":" + (tH.minutes<10?'0':'') + tH.minutes + ":" + (tH.seconds<10?'0':'') + tH.seconds;
 		clockElem0.textContent = (tH.hours<10?'0':'') + tH.hours + ":" + (tH.minutes<10?'0':'') + tH.minutes + ":" + (tH.seconds<10?'0':'') + tH.seconds;
-		initializeHoursClock('saturdayHours', saturday);
+		initializeHoursClock(saturdayCountdown, saturday);
 	}
 
 	video.append("svg:text")
@@ -191,7 +191,7 @@ var hourScale = d3.scale.linear()
 
 	// Day 1 Countdown text
 
-	var countDown = radio.append("svg:text")
+	var countdownSunday = radio.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 29)
 		 .style("fill", "#FFF")
@@ -204,10 +204,7 @@ var hourScale = d3.scale.linear()
 	var clockElem = document.getElementById('sundayHours');
 	clockElem.textContent = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
 	clockElem.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
-	initializeHoursClock('sundayHours', sunday);
-
-	countDown.text((t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds);
-
+	initializeHoursClock(countdownSunday, sunday);
 
 	//... and hours
 	radio.selectAll('.hour-tick')
