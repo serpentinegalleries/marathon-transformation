@@ -316,7 +316,7 @@ ALTERNATE TEXT
 	}
 
 	$(window).on('load', function(e){
-		if(window.location.hash = '#livestream') {
+		if(window.location.hash == '#livestream') {
 			$("#livestream").modal("show");
 		}
 	});
