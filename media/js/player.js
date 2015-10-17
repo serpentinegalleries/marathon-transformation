@@ -46,8 +46,8 @@ jQuery(document).ready(function( $ ) {
 
 	var sunday_end = 'October 18 2015 13:00:00 GMT+01:00';
 	timeLeftSun = getTimeRemaining(sunday_end);
-
-	var sundayArc = (timeLeftSun.days*24)*60 + (timeLeftSun.hours)*60 + timeLeftSun.minutes;
+	console.log(timeLeftSun.hours);
+	var sundayArc = (timeLeftSun.hours)*60 + timeLeftSun.minutes;
 	sundayArc = (840 - sundayArc) / 840;
 
 /**********
@@ -377,13 +377,6 @@ Resize player
 /**************
 ALTERNATE TEXT
 *************/
-
-
-	setInterval(function() {
-		videoForeground.transition()
-		    .duration(d3.time.minute)
-		    .call(arcTween, saturdayArc * τ);
-		}, 20000);
 
 
 	function arcTween(transition, newAngle) {
