@@ -133,6 +133,7 @@ var hourScale = d3.scale.linear()
 		var tH = getTimeRemaining(saturday);
 		var clockElem0 = document.getElementById('saturdayHours');
 		clockElem0.innerHTML = (tH.hours<10?'0':'') + tH.hours + ":" + (tH.minutes<10?'0':'') + tH.minutes + ":" + (tH.seconds<10?'0':'') + tH.seconds;
+		clockElem0.textContent = (tH.hours<10?'0':'') + tH.hours + ":" + (tH.minutes<10?'0':'') + tH.minutes + ":" + (tH.seconds<10?'0':'') + tH.seconds;
 		initializeHoursClock('saturdayHours', saturday);
 	}
 
@@ -190,7 +191,7 @@ var hourScale = d3.scale.linear()
 
 	// Day 1 Countdown text
 
-	radio.append("svg:text")
+	var countDown = radio.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", 29)
 		 .style("fill", "#FFF")
@@ -201,8 +202,11 @@ var hourScale = d3.scale.linear()
 
 	var t = getTimeRemaining(sunday);
 	var clockElem = document.getElementById('sundayHours');
+	clockElem.textContent = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
 	clockElem.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
 	initializeHoursClock('sundayHours', sunday);
+
+	countDown.text((t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;);
 
 
 	//... and hours
