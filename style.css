@@ -841,6 +841,10 @@ p.srp-post-date {
     margin-bottom: 50px !important;
 }
 
+#blog iframe {
+    max-width: 100%;
+}
+
 #blog h1,
 #blog h2,
 #blog h3,
@@ -1050,7 +1054,11 @@ header #logo-animation {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-
+    #blog iframe {
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
 
 @media (max-width: 600px) {
