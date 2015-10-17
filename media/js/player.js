@@ -39,7 +39,7 @@ jQuery(document).ready(function( $ ) {
 	    clock.innerHTML = "-" + t.days+ " DAY";
 	}
 
-	var saturday_end = 'October 17 2015 22:00:00 GMT+01:00';
+	var saturday_end = 'October 17 2015 8:00:00 GMT+01:00';
 	timeLeft = getTimeRemaining(saturday_end);
 
 	var saturdayArc = (timeLeft.hours)*60 + timeLeft.minutes;

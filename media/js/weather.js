@@ -235,4 +235,9 @@ function setWindIconBlack(wind_direction) {
 
 	});
 
+	$('.programme-anchor').prepend("<a name='programme'></a>");
+	$('.participants-anchor').prepend("<a name='participants'></a>");
+	$('.live-blog-anchor').prepend("<a name='live-blog'></a>");
+
+
 });
