@@ -307,6 +307,9 @@ a:focus {
     border: none !important;
     outline-color: transparent !important;
 }
+h1,h2,h3,h4,h5,h6,p,a,em,b,strong,span {
+    hypens: none;
+}
 
 /******************
 SECTIONS
@@ -995,7 +998,12 @@ header #logo-animation {
         line-height: 29px; 
     }
     .textwidget p {
-        line-height: 20px !important;
+        line-height: 24px !important;
+    }
+    .textwidget p b, .textwidget p strong {
+        font-family: 'gt_walsheimbold';
+        font-size: 16px;
+        line-height: 22px;
     }
     .textwidget {
         width: 80%;

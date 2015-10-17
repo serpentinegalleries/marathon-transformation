@@ -229,7 +229,7 @@ function setWindIconBlack(wind_direction) {
 	$('a#participants-all').on('click', function () {
 		$('a.participants-active').removeClass("participants-active");
 		$(this).attr("class", "participants-active");
-		$('#participants-a-i').show(1000);
+		$('#participants-a-i').slideToggle(1000);
 		$('#participants-j-s').show(1000);
 		$('#participants-t-z').show(1000);
 
