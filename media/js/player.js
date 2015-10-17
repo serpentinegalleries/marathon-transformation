@@ -22,7 +22,6 @@ jQuery(document).ready(function( $ ) {
 		};
 	}
 
-
 	function initializeHoursClock(svgEl, endtime){
 	  var timeinterval = setInterval(function(){
 	    var t = getTimeRemaining(endtime);
@@ -39,13 +38,13 @@ jQuery(document).ready(function( $ ) {
 	    clock.innerHTML = "-" + t.days+ " DAY";
 	}
 
-	var saturday_end = 'October 17 2015 22:00:00 GMT+01:00';
+	var saturday_end = 'October 17 2015 22:30:00 GMT+01:00';
 	timeLeftSat = getTimeRemaining(saturday_end);
 
 	var saturdayArc = (timeLeftSat.hours)*60 + timeLeftSat.minutes;
 	saturdayArc = (720 - saturdayArc) / 720;
 
-	var sunday_end = 'October 18 2015 12:00:00 GMT+01:00';
+	var sunday_end = 'October 17 2015 22:00:00 GMT+01:00';
 	timeLeftSun = getTimeRemaining(sunday_end);
 
 	var sundayArc = (timeLeftSun.days*24)*60 + (timeLeftSun.hours)*60 + timeLeftSun.minutes;
@@ -81,13 +80,13 @@ var hourScale = d3.scale.linear()
 	  .attr("transform", "translate(" + width / 2 + "," + 200 + ")")
 
 	// Add the background arc, from 0 to 100% (τ).
-	var background = video.append("path")
+	var videoBackground = video.append("path")
 	  .datum({endAngle: τ})
 	  .style("fill", "#FFF")
 	  .attr("opacity",".5")
 	  .attr("d", arc);
 
-	if (saturdayArc > 0) {
+	if (getTimeRemaining(saturday_end).total > 0 ) {
 		var videoForeground = video.append("path")
 		  .datum({endAngle: τ * saturdayArc})
 		  .style("fill", "#FFF")
@@ -125,8 +124,29 @@ var hourScale = d3.scale.linear()
 		 .text("ON AIR");
 	}
 
+	if(getTimeRemaining(saturday_end).total < 0) {
+		video.append("svg:text")
+			 .attr("x", 0)
+			 .attr("y", 20)
+			 .style("fill", "#FFF")
+			 .attr("stroke-width", -1)
+			 .attr("class", "description-text")
+			 .attr("text-anchor", "middle")
+			 .text("Archive Coming Soon");
+
+		video.append("svg:text")
+			 .attr("x", 0)
+			 .attr("y", -100)
+			 .style("fill", "#FFF")
+			 .attr("stroke-width", -1)
+			 .attr("text-anchor", "middle")
+			 .attr("class", "status")
+			 .text("OVER");
+
+		videoBackground.attr("opacity", "1");
+	}
 	/* Day 1 Countdown text */
-	if (saturdayArc < 0) {
+	else if (saturdayArc < 0) {
 		var saturdayCountdown = video.append("svg:text")
 			 .attr("x", 0)
 			 .attr("y", 29)
@@ -134,7 +154,7 @@ var hourScale = d3.scale.linear()
 			 .attr("text-anchor", "middle")
 			 .attr("stroke-width", -1)
 			 .attr("class", "countdown")
-			 .attr("id", "saturdayHours")
+			 .attr("id", "saturdayHours");
 
 		var tH = getTimeRemaining(saturday);
 		var clockElem0 = document.getElementById('saturdayHours');
@@ -211,27 +231,27 @@ var hourScale = d3.scale.linear()
 		clockElem.textContent = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
 		clockElem.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
 		initializeHoursClock(countdownSunday, sunday);
-	};
+	}
+	else if(getTimeRemaining(sunday_end).total > 0) {
+		var stream = document.getElementById('radio');
 
-
-	if (sundayArc > 0) {
 		var radioForeground = radio.append("path")
-		  .datum({endAngle: τ * saturdayArc})
+		  .datum({endAngle: τ * sundayArc})
 		  .style("fill", "#FFF")
 		  .attr("opacity","1")
 		  .attr("d", arc);
 
-		radio.append('text')
+		var playButton = radio.append('text')
 		 .attr("x", -71)
 		 .attr("y", 20)
-	    .attr('font-family', 'FontAwesome')
-	    .style("fill", "#FFF")
-	    .attr("font-size", "20px")
-	    .attr("id", "play-icon")
-	    .text(function(d) { return '\uf04b' })
-		 .on("click", function() { $("#livestream").modal("show"); });
+	     .attr('font-family', 'FontAwesome')
+	     .style("fill", "#FFF")
+	     .attr("font-size", "20px")
+	     .attr("id", "play-icon")
+	     .text(function(d) { return '\uf04b' })
+	     .on("click", playAudio);
 
-		radio.append("svg:text")
+		radio.append("text")
 		 .attr("x", 10)
 		 .attr("y", 20)
 		 .style("fill", "#FFF")
@@ -240,9 +260,25 @@ var hourScale = d3.scale.linear()
 		 .attr("text-anchor", "middle")
 		 .attr("id", "watch")
 		 .text("listen live")
-		 .on("click", function() { $("#livestream").modal("show"); });
+		 .on("click", playAudio);
 
-		 radio.append("svg:text")
+		// variable to store HTML5 audio element
+		var stream = document.getElementById('radio-stream');
+		var playI = document.getElementById('playIcon');
+		var playB = document.getElementById('playButton');
+		 
+
+		function playAudio() {
+			if (stream.paused) {
+				stream.play();
+				playButton.text(function(d) { return '\uf04c' })
+			} else { 
+				stream.pause();
+				playButton.text(function(d) { return '\uf04b' })
+			}
+		}
+
+		radio.append("svg:text")
 		 .attr("x", 0)
 		 .attr("y", -100)
 		 .style("fill", "#FFF")
@@ -250,6 +286,28 @@ var hourScale = d3.scale.linear()
 		 .attr("text-anchor", "middle")
 		 .attr("class", "status")
 		 .text("ON AIR");
+	}
+
+	if(getTimeRemaining(sunday_end).total < 0) {
+		radio.append("svg:text")
+			 .attr("x", 0)
+			 .attr("y", 20)
+			 .style("fill", "#FFF")
+			 .attr("stroke-width", -1)
+			 .attr("class", "description-text")
+			 .attr("text-anchor", "middle")
+			 .text("Archive Coming Soon");
+
+		radio.append("svg:text")
+			 .attr("x", 0)
+			 .attr("y", -100)
+			 .style("fill", "#FFF")
+			 .attr("stroke-width", -1)
+			 .attr("text-anchor", "middle")
+			 .attr("class", "status")
+			 .text("OVER");
+
+		radioBackground.attr("opacity", "1");
 	}
 
 	//... and hours

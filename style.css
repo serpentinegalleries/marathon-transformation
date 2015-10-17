@@ -520,7 +520,13 @@ PLAYER VISUALISAION
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
+audio {
+    display: block;
+    width: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 #livestream .modal-dialog {
     width: 100%;
     height: 100%;

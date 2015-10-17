@@ -1,7 +1,8 @@
 <?php get_header('homepage'); ?>
-
     <div class="content">
         <div class="container">
+
+      <audio id="radio-stream"><source src="http://radio3.citrus3.com:8576/;stream.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
 
             <?php
                 ob_start();
@@ -166,7 +167,6 @@
                 </div>
             </div>
         </div>
-
 
 <?php get_footer(); ?>
 
