@@ -3,7 +3,7 @@ jQuery(document).ready(function( $ ) {
 	/* Countdown */
 
 	var saturday = 'October 17 2015 09:59:59 GMT+01:00';
-	var sunday = 'October 18 2015 00:00:01 GMT+01:00';
+	var sunday = 'October 17 2015 22:15:01 GMT+01:00';
 
 	var timeLeft;
 
@@ -44,11 +44,11 @@ jQuery(document).ready(function( $ ) {
 	var saturdayArc = (timeLeftSat.hours)*60 + timeLeftSat.minutes;
 	saturdayArc = (720 - saturdayArc) / 720;
 
-	var sunday_end = 'October 17 2015 22:00:00 GMT+01:00';
+	var sunday_end = 'October 18 2015 13:00:00 GMT+01:00';
 	timeLeftSun = getTimeRemaining(sunday_end);
 
 	var sundayArc = (timeLeftSun.days*24)*60 + (timeLeftSun.hours)*60 + timeLeftSun.minutes;
-	sundayArc = (720 - sundayArc) / 720;
+	sundayArc = (840 - sundayArc) / 840;
 
 /**********
 PLAYER
@@ -216,7 +216,7 @@ var hourScale = d3.scale.linear()
 	  .attr("d", arc);
 
 	// Day 1 Countdown text
-	if (sundayArc < 0) {
+	if (getTimeRemaining(sunday).total > 0) {
 		var countdownSunday = radio.append("svg:text")
 			 .attr("x", 0)
 			 .attr("y", 29)
@@ -233,7 +233,22 @@ var hourScale = d3.scale.linear()
 		initializeHoursClock(countdownSunday, sunday);
 	}
 	else if(getTimeRemaining(sunday_end).total > 0) {
-		var stream = document.getElementById('radio');
+
+		// variable to store HTML5 audio element
+		var stream = document.getElementById('radio-stream');
+		var playI = document.getElementById('playIcon');
+		var playB = document.getElementById('playButton');
+		 
+
+		function playAudio() {
+			if (stream.paused) {
+				stream.play();
+				playButton.text(function(d) { return '\uf04c' })
+			} else { 
+				stream.pause();
+				playButton.text(function(d) { return '\uf04b' })
+			}
+		}
 
 		var radioForeground = radio.append("path")
 		  .datum({endAngle: τ * sundayArc})
@@ -261,22 +276,6 @@ var hourScale = d3.scale.linear()
 		 .attr("id", "watch")
 		 .text("listen live")
 		 .on("click", playAudio);
-
-		// variable to store HTML5 audio element
-		var stream = document.getElementById('radio-stream');
-		var playI = document.getElementById('playIcon');
-		var playB = document.getElementById('playButton');
-		 
-
-		function playAudio() {
-			if (stream.paused) {
-				stream.play();
-				playButton.text(function(d) { return '\uf04c' })
-			} else { 
-				stream.pause();
-				playButton.text(function(d) { return '\uf04b' })
-			}
-		}
 
 		radio.append("svg:text")
 		 .attr("x", 0)

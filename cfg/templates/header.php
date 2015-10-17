@@ -12,7 +12,7 @@
 			 </div>
 			 <div id="radio" class="col-lg-4 col-md-4 col-sm-12">
 
-		 			<div id="videoText">from 12AM to 12PM
+		 			<div id="videoText">from 10PM to 12PM
 		 			</div>
 					
 
