@@ -180,6 +180,7 @@ function setWindIconBlack(wind_direction) {
 		if(participant_ids.indexOf(window.location.hash))
 			{
 				var $participantId = $(window.location.hash);
+				$participantId.closest('.participants-list').show();
 				$participantId.closest('.participant-text').find('.participant-body').show(700);
 			}
 	});	
@@ -188,6 +189,7 @@ function setWindIconBlack(wind_direction) {
 		if(participant_ids.indexOf(window.location.hash))
 			{
 				var $participantId = $(window.location.hash);
+				$participantId.closest('.participants-list').show();
 				$participantId.closest('.participant-text').find('.participant-body').show(700);
 			}
 	});
