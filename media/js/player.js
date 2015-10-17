@@ -315,7 +315,17 @@ ALTERNATE TEXT
 	});
 	}
 
+	$(window).on('load', function(e){
+		if(window.location.hash = '#livestream') {
+			$("#livestream").modal("show");
+		}
+	});
+
+	$('#watch').on('click', function () {
+		window.location.hash = "#livestream";
+	});
 	$('#livestream').on('hidden.bs.modal', function () {
         $('#livestream iframe').attr("src", jQuery("#livestream iframe").attr("src"));
+        window.location.hash = '';
     });
 });
