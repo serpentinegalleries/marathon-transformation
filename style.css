@@ -904,9 +904,10 @@ p.srp-post-date {
 }
 
 #blog p img {
-    width: 130%;
+    max-width: 100%;
     height: auto;
-    margin: 15px -15%;
+    display: block;
+    margin: 15px auto;
 }
 
 #blog-page #text-weather {
