@@ -44,7 +44,7 @@ jQuery(document).ready(function( $ ) {
 	var saturdayArc = (timeLeftSat.hours)*60 + timeLeftSat.minutes;
 	saturdayArc = (720 - saturdayArc) / 720;
 
-	var sunday_end = 'October 17 2015 22:00:00 GMT+01:00';
+	var sunday_end = 'October 18 2015 12:00:00 GMT+01:00';
 	timeLeftSun = getTimeRemaining(sunday_end);
 
 	var sundayArc = (timeLeftSun.days*24)*60 + (timeLeftSun.hours)*60 + timeLeftSun.minutes;
