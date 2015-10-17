@@ -852,6 +852,9 @@ p.srp-post-date {
     margin-left: auto;
     margin-right: auto;
 }
+#read-more:hover {
+    opacity: .5;
+}
 
 #blog h1,
 #blog h2,

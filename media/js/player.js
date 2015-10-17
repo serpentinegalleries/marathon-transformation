@@ -40,10 +40,16 @@ jQuery(document).ready(function( $ ) {
 	}
 
 	var saturday_end = 'October 17 2015 22:00:00 GMT+01:00';
-	timeLeft = getTimeRemaining(saturday_end);
+	timeLeftSat = getTimeRemaining(saturday_end);
 
-	var saturdayArc = (timeLeft.hours)*60 + timeLeft.minutes;
+	var saturdayArc = (timeLeftSat.hours)*60 + timeLeftSat.minutes;
 	saturdayArc = (720 - saturdayArc) / 720;
+
+	var sunday_end = 'October 18 2015 12:00:00 GMT+01:00';
+	timeLeftSun = getTimeRemaining(sunday_end);
+
+	var sundayArc = (timeLeftSun.days*24)*60 + (timeLeftSun.hours)*60 + timeLeftSun.minutes;
+	sundayArc = (720 - sundayArc) / 720;
 
 /**********
 PLAYER
@@ -190,21 +196,61 @@ var hourScale = d3.scale.linear()
 	  .attr("d", arc);
 
 	// Day 1 Countdown text
+	if (sundayArc < 0) {
+		var countdownSunday = radio.append("svg:text")
+			 .attr("x", 0)
+			 .attr("y", 29)
+			 .style("fill", "#FFF")
+			 .attr("stroke-width", -1)
+			 .attr("text-anchor", "middle")
+			 .attr("class", "countdown")
+			 .attr("id", "sundayHours");
 
-	var countdownSunday = radio.append("svg:text")
+		var t = getTimeRemaining(sunday);
+		var clockElem = document.getElementById('sundayHours');
+		clockElem.textContent = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
+		clockElem.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
+		initializeHoursClock(countdownSunday, sunday);
+	};
+
+
+	if (sundayArc > 0) {
+		var radioForeground = radio.append("path")
+		  .datum({endAngle: τ * saturdayArc})
+		  .style("fill", "#FFF")
+		  .attr("opacity","1")
+		  .attr("d", arc);
+
+		radio.append('text')
+		 .attr("x", -71)
+		 .attr("y", 20)
+	    .attr('font-family', 'FontAwesome')
+	    .style("fill", "#FFF")
+	    .attr("font-size", "20px")
+	    .attr("id", "play-icon")
+	    .text(function(d) { return '\uf04b' })
+		 .on("click", function() { $("#livestream").modal("show"); });
+
+		radio.append("svg:text")
+		 .attr("x", 10)
+		 .attr("y", 20)
+		 .style("fill", "#FFF")
+		 .attr("stroke-width", -1)
+		 .attr("class", "name")
+		 .attr("text-anchor", "middle")
+		 .attr("id", "watch")
+		 .text("listen live")
+		 .on("click", function() { $("#livestream").modal("show"); });
+
+		 radio.append("svg:text")
 		 .attr("x", 0)
-		 .attr("y", 29)
+		 .attr("y", -100)
 		 .style("fill", "#FFF")
 		 .attr("stroke-width", -1)
 		 .attr("text-anchor", "middle")
-		 .attr("class", "countdown")
-		 .attr("id", "sundayHours");
-
-	var t = getTimeRemaining(sunday);
-	var clockElem = document.getElementById('sundayHours');
-	clockElem.textContent = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
-	clockElem.innerHTML = (t.hours<10?'0':'') + t.hours + ":" + (t.minutes<10?'0':'') + t.minutes + ":" + (t.seconds<10?'0':'') + t.seconds;
-	initializeHoursClock(countdownSunday, sunday);
+		 .attr("class", "status")
+		 .text("ON AIR");
+	}
 
 	//... and hours
 	radio.selectAll('.hour-tick')
@@ -276,29 +322,11 @@ ALTERNATE TEXT
 *************/
 
 
-	// Use transition.call
-	// (identical to selection.call) so that we can encapsulate the logic for
-	// tweening the arc in a separate function below.
-	/*setInterval(function() {
-		videoForeground.datum({endAngle: τ * saturdayArc})
-	}, 1500);*/
-
-
-	/*radio.append("svg:text")
-		 .attr("x", 0)
-		 .attr("y", 95)
-		 .style("fill", "#FFF")
-		 .attr("stroke-width", -1)
-		 .attr("text-anchor", "middle")
-		 .attr("class", "name")
-		 .text("listen");
-
-	*/
 	setInterval(function() {
 		videoForeground.transition()
 		    .duration(d3.time.minute)
 		    .call(arcTween, saturdayArc * τ);
-		}, 200000);
+		}, 20000);
 
 
 	function arcTween(transition, newAngle) {
@@ -327,6 +355,6 @@ ALTERNATE TEXT
 	});
 	$('#livestream').on('hidden.bs.modal', function () {
         $('#livestream iframe').attr("src", jQuery("#livestream iframe").attr("src"));
-        window.location.hash = '';
+        window.location.href = "/";
     });
 });
