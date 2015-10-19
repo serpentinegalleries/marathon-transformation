@@ -6,9 +6,8 @@
         <div id="blog">
                 <div class="container">
                     <div class="row">
-
                         <?php
-                        query_posts('cat=7');
+                        query_posts('cat=7&showposts=5&paged='.get_query_var('paged'));
                         while (have_posts()) : the_post();
                         ?>
                             <article>
@@ -33,6 +32,21 @@
                         <?php
                         endwhile;
                         ?>
+
+                        <?php if ($paged > 1) { ?>
+
+                        <nav id="nav-posts">
+                            <?php next_posts_link('Previous posts'); ?>&nbsp;&nbsp;&nbsp;&#8212;&nbsp;&nbsp;&nbsp;<?php previous_posts_link('Newer posts'); ?>
+                        </nav>
+
+                        <?php } else { ?>
+
+                        <nav id="nav-posts">
+                            <div class="prev"><?php next_posts_link('Previous posts'); ?></div>
+                        </nav>
+
+                        <?php } ?>
+
 
                     </div>
                 </div>
