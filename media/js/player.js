@@ -204,7 +204,11 @@ var hourScale = d3.scale.linear()
 				return 'rotate(' + hourScale(d) + ')';
 			});
 
-	// Radio Player
+	/*********************
+	Radio Player
+	*********************/
+
+	var radioArchive = ["Susan Miller", "Haunted Machines", "Deep Lab", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
 	var radio = d3.select("#radio-viz")
 	.append("g")
 	  .attr("transform", "translate(" + width / 2 + "," + 200 + ")")
@@ -239,7 +243,6 @@ var hourScale = d3.scale.linear()
 		var playI = document.getElementById('playIcon');
 		var playB = document.getElementById('playButton');
 		 
-
 		function playAudio() {
 			if (stream.paused) {
 				stream.play();
@@ -287,6 +290,7 @@ var hourScale = d3.scale.linear()
 		 .text("ON AIR");
 	}
 
+	/* For archive waiting text 
 	if(getTimeRemaining(sunday_end).total < 0) {
 		radio.append("svg:text")
 			 .attr("x", 0)
@@ -307,9 +311,37 @@ var hourScale = d3.scale.linear()
 			 .text("OVER");
 
 		radioBackground.attr("opacity", "1");
-	}
+	}*/
 
-	//... and hours
+	/* Hour ticks */
+
+	var radioText = radio.append("svg:text")
+		.attr("x", 0)
+		.attr("y", 20)
+		.style("fill", "#FFF")
+		.attr("stroke-width", -1)
+		.attr("class", "description-text")
+		.attr("text-anchor", "middle")
+		.text("Archive Coming Soon");
+
+	radio.selectAll('.hour-box')
+		.data(d3.range(0,12)).enter()
+			.append('rect')
+			.attr('class', 'hour-box')
+			.attr('x',0)
+			.attr('y', hourTickStart - 30)
+			.attr('width',30)
+			.attr('height',50)
+			.style("stroke-width", "2px")
+			.style("opacity", "0")
+			.attr('transform',function(d){
+				return 'rotate(' + hourScale(d) + ')';
+			})
+			.on("mouseover", function(d, i) { 
+				radioText.text(radioArchive[i])
+					.attr("class", "name");
+			 });
+
 	radio.selectAll('.hour-tick')
 		.data(d3.range(0,12)).enter()
 			.append('line')
@@ -407,4 +439,5 @@ ALTERNATE TEXT
         $('#livestream iframe').attr("src", jQuery("#livestream iframe").attr("src"));
         window.location.href = "/";
     });
+
 });
