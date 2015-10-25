@@ -637,8 +637,12 @@ PARTICIPANTS
 .participants-list .participant-content a {
     font-family: 'gt_walsheimbold';
 }
-.participants-list .participant-content .participants-src a {
+.participants-list .participant-media a {
     color: #4696ff;
+}
+.participants-list .participant-media a:hover {
+    color: #4696ff;
+    opacity: .5;
 }
 .participants-list .share, .participants-list .participant-hide {
     text-align: center;

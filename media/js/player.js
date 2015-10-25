@@ -446,7 +446,7 @@ ALTERNATE TEXT
 	});
 	$('#livestream').on('hidden.bs.modal', function () {
         $('#livestream iframe').attr("src", jQuery("#livestream iframe").attr("src"));
-        window.location.href = "/";
+        //window.location.href = "/";
     });
 
 	$(window).on('load', function(e){
@@ -455,8 +455,9 @@ ALTERNATE TEXT
 		}
 	});
 
-	$('.participant-src').on('click', function () {
+	$('.participant-video').on('click', function () {
 		var $videoID = $(this).attr("id");
+		console.log($videoID);
         $('#livestream iframe').attr("src", "https://www.youtube.com/embed/" + $videoID + "?hd=1&rel=0&autohide=1&showinfo=0");
 	    $("#livestream").modal("show");
 	});
