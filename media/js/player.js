@@ -216,7 +216,7 @@ var hourScale = d3.scale.linear()
 	var radioBackground = radio.append("path")
 	  .datum({endAngle: τ})
 	  .style("fill", "#FFF")
-	  .attr("opacity",".5")
+	  .attr("opacity","1")
 	  .attr("d", arc);
 
 	// Day 1 Countdown text
@@ -324,6 +324,15 @@ var hourScale = d3.scale.linear()
 		.attr("text-anchor", "middle")
 		.text("Archive Coming Soon");
 
+		radio.append("svg:text")
+			 .attr("x", 0)
+			 .attr("y", -100)
+			 .style("fill", "#FFF")
+			 .attr("stroke-width", -1)
+			 .attr("text-anchor", "middle")
+			 .attr("class", "status")
+			 .text("OVER");
+
 	radio.selectAll('.hour-box')
 		.data(d3.range(0,12)).enter()
 			.append('rect')
@@ -336,11 +345,11 @@ var hourScale = d3.scale.linear()
 			.style("opacity", "0")
 			.attr('transform',function(d){
 				return 'rotate(' + hourScale(d) + ')';
-			})
-			.on("mouseover", function(d, i) { 
+			});
+			/* For archive .on("mouseover", function(d, i) { 
 				radioText.text(radioArchive[i])
 					.attr("class", "name");
-			 });
+			 }); */
 
 	radio.selectAll('.hour-tick')
 		.data(d3.range(0,12)).enter()
@@ -439,5 +448,17 @@ ALTERNATE TEXT
         $('#livestream iframe').attr("src", jQuery("#livestream iframe").attr("src"));
         window.location.href = "/";
     });
+
+	$(window).on('load', function(e){
+		if(window.location.hash == '#livestream') {
+			$("#livestream").modal("show");
+		}
+	});
+
+	$('.participant-src').on('click', function () {
+		var $videoID = $(this).attr("id");
+        $('#livestream iframe').attr("src", "https://www.youtube.com/embed/" + $videoID + "?hd=1&rel=0&autohide=1&showinfo=0");
+	    $("#livestream").modal("show");
+	});
 
 });

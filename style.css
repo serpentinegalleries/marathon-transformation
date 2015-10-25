@@ -637,6 +637,9 @@ PARTICIPANTS
 .participants-list .participant-content a {
     font-family: 'gt_walsheimbold';
 }
+.participants-list .participant-content .participants-src a {
+    color: #4696ff;
+}
 .participants-list .share, .participants-list .participant-hide {
     text-align: center;
     padding-top: 15px;
@@ -714,6 +717,9 @@ PARTICIPANTS
 }
 .participants-inactive {
     text-decoration: none;
+}
+.participant-media {
+    padding-top: 50px;
 }
 /**************
 Schedule
