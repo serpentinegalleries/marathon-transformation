@@ -976,6 +976,10 @@ header #logo-animation {
     min-width: 100vw;
 }
 
+.g-background-default {
+    background-color: #969696 !important;
+}
+
 @media screen and (max-width: 1200px) {
     header .tm-logo {
         display: block !important;
@@ -1098,5 +1102,5 @@ header #logo-animation {
     }
 }
 .hour-box {
-    cursor: pointer;
+    //cursor: pointer;
 }
