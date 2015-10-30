@@ -56,4 +56,12 @@
 
     add_filter('the_excerpt_rss', array( 'myThemes' , 'rssThumbnail' ) );
     add_filter('the_content_feed', array( 'myThemes' , 'rssThumbnail' ) );
+
+    add_action('init', 'theme_enqueue_styles');
+
+    function theme_enqueue_styles() {
+        wp_enqueue_style('less-style', get_stylesheet_directory_uri().'/style.less');
+    };
+
+    theme_enqueue_styles();
 ?>
