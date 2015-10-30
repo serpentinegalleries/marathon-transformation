@@ -196,9 +196,9 @@ nav.header-nav {
 }
 /* Nav links */
 nav.base-nav ul li:hover > a, nav.base-nav ul li > a {
-    font-family: 'gt_walsheimbold' !important;
-    color: #FFF !important;
     background: transparent !important;
+    color: #FFF !important;
+    font-family: 'gt_walsheimbold' !important;
     font-size: 16px !important;
     text-transform: capitalize !important;
     line-height: 18px !important;
@@ -214,7 +214,6 @@ nav.mythemes-nav-inline.base-nav {
 }
 
 
-
 /******************
 FOOTER
 ******************/
@@ -227,11 +226,6 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
     display: block !important;
     margin-top: 25px !important;
 }
-.footer-logo {
-    max-width: 338px;
-    margin-bottom: 100px;
-    display: block;
-}
 .tm-logo {
     width: 338px;
     max-width: 100%;
@@ -241,19 +235,14 @@ footer {
     background: #000;
     padding: 40px 50px 40px 50px !important;
 }
+footer img {
+    max-width: 100%;
+}
 .mythemes-copyright {
     background: #000 !important;
     padding: 0 !important;
 }
-
-footer img {
-    max-width: 100%;
-}
-
-footer .container {
-    max-width: 100%;
-}
-
+// Supporters block
 #supporters {
     background: #fff;
     width: 100%;
@@ -265,7 +254,6 @@ footer .container {
     padding-top: 100px;    
     padding-bottom: 100px;    
 }
-
 
 /**********************
 CONTAINERS & ELEMENTS
@@ -302,15 +290,20 @@ hr {
     border-top: 1px solid #969696 !important;
     margin: 0 !important;
 }
-
 a:focus {
     border: none !important;
     outline-color: transparent !important;
 }
 h1,h2,h3,h4,h5,h6,p,a,em,b,strong,span {
-    hypens: none;
+    hyphens: none !important;
 }
-
+#logo-animation video {
+    max-width: 100%;
+}
+header #logo-animation {
+    margin-top: 25px;
+    background: transparent;
+}
 /******************
 SECTIONS
 ******************/
@@ -367,7 +360,7 @@ SECTIONS
     font-size: 16px;
 }
 .textwidget h4 {
-    padding-top: 50px;
+    padding-top: 50px; // Needs work
 }
 .widget-title {
     display: none;
@@ -400,7 +393,7 @@ PLAYER VISUALISAION
     width: 100%;
     display: block;
     margin: 0 auto;
-    max-height: 70vh;
+    max-height: 70vh; // Up for review
 }
 #videoText {
     display: block;
@@ -438,15 +431,11 @@ PLAYER VISUALISAION
 #player #play-icon:hover {
     cursor: pointer;
 }
-#player .name:hover {
-    cursor: pointer;
-}
 #player .title {
     font-family: 'gt_walsheimthin';
     font-size: 24px;
     line-height: 29px;  
 }
-
 #videoPlayer {
     max-width: 500px;
     display: block;
@@ -454,14 +443,12 @@ PLAYER VISUALISAION
     margin-bottom: 20px;
     max-height: 100%;
 }
-
 #radioPlayer {
     max-width: 500px;
     display: block;
     margin: 0 auto;
     max-height: 100%;
 }
-
 #player i {
     position: absolute;
     display: block;
@@ -508,13 +495,11 @@ PLAYER VISUALISAION
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
 /* Internet Explorer */
 @-ms-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
 /* Opera < 12.1 */
 @-o-keyframes fadein {
     from { opacity: 0; }
@@ -527,6 +512,9 @@ audio {
     top: 50%;
     transform: translateY(-50%);
 }
+/*************
+VIDEO MODAL
+*************/
 #livestream .modal-dialog {
     width: 100%;
     height: 100%;
@@ -557,13 +545,19 @@ audio {
     color: #fff;
     z-index: 500000;
 }
+#livestream img {
+    max-width: 80%;
+}
+#youtube {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute;
+}
 .close {
     opacity: 1 !important;
 }
 
-#livestream img {
-    max-width: 80%;
-}
 
 /*******************
 WEATHER ICONS
@@ -588,8 +582,6 @@ WEATHER ICONS
     margin-top: 12px !important;
     min-height: 50px;
 }
-
-
 /*****************
 PARTICIPANTS
 *****************/
@@ -680,10 +672,11 @@ PARTICIPANTS
 .participant-menu a:active, .participant-menu a:hover {
     text-decoration: underline;
 }
-.participant-url {
+.participant-url a {
     position: relative;
-    top:-70px;
-    display: block;
+    padding-top: 50px;
+    margin-top: -50px;
+        display: block;
     height: 0;
     width:0;
 }
@@ -724,6 +717,9 @@ PARTICIPANTS
 }
 .participant-media {
     padding-top: 50px;
+}
+.participant-up {
+    display: none;
 }
 /**************
 Schedule
@@ -778,54 +774,9 @@ hr#programme-header {
     margin-bottom: 0 !important;
 }
 
-.srp-post-content-container {
-    display: block !important;
-    width: 65%;
-    margin: 0 auto;
-}
-
-.srp-post-title a {
-    color: #000;
-    font-family: 'gt_walsheimbold';
-    font-size: 36px;
-    line-height: 40px;
-    text-align: center !important;
-}
-.srp-post-title a:hover {
-    color: #969696;
-}
-.srp-post-title {
-    display: block;
-    margin: 0 auto;
-    text-align: center !important;
-    max-width: 50%
-}
-p.srp-post-date {
-    font-family: 'gt_walsheimbold' !important;
-    font-size: 24px;
-    line-height: 29px;  
-    text-align: center;
-    padding-top: 50px;
-    color: #000 !important;
-}
-.srp-post-content {
-    font-family: 'surveyor_textlight' !important;
-    font-size: 26px;
-    padding: 100px 0;
-}
-
-.srp-post-content a {
-    font-family: 'surveyor_textlight' !important;
-    font-size: 26px;
-    padding: 100px 0;
-    color: #000;
-    font-weight: 700;
-}
-
-.srp-post-content a:hover {
-    color: #969696;
-    font-weight: 700;
-}
+/**************
+BLOG
+***************/
 
 #blog-page nav.base-nav ul li a {
     color: #000 !important;
@@ -856,7 +807,6 @@ p.srp-post-date {
     margin-top: 200px;
     margin-bottom: 50px !important;
 }
-
 #blog iframe {
     max-width: 100%;
 }
@@ -871,7 +821,6 @@ p.srp-post-date {
 #read-more:hover {
     opacity: .5;
 }
-
 #blog h1,
 #blog h2,
 #blog h3,
@@ -885,47 +834,38 @@ p.srp-post-date {
     text-align: center;
     color: #000 !important;
 }
-
 #blog .status {
     font-size: 16px;
 }
-
 #blog article {
     margin: 0;
-}
-
+}   
 #blog a {
     color: #000;
 }
-
 #blog a:hover {
     color: #969696;
 }
-
 #blog .header-block {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
 #blog h5 {
     padding-top: 25px;
     margin-top: 0;
 }
-
 #blog .status {
     color: #000 !important;
     text-align: center !important;
     margin: 15px 0;
     font-family: 'gt_walsheimbold';
 }
-
 #blog p img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 15px auto;
 }
-
 #blog-page #text-weather {
     color: #000;
 }
@@ -945,29 +885,9 @@ h5#blog-front-page-h {
 #blog-page header {
     min-height: auto;
 }
-
 .anchor {
     position: absolute;
     margin-top: -100px;
-}
-
-.participant-up {
-    display: none;
-}
-
-
-#youtube {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    position: absolute;
-}
-#logo-animation video {
-    max-width: 100%;
-}
-header #logo-animation {
-    margin-top: 25px;
-    background: transparent;
 }
 
 /** IMAGE SECTIONS **/
