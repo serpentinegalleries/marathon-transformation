@@ -234,9 +234,9 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
 footer {
     background: #000;
     padding: 40px 50px 40px 50px !important;
-}
-footer img {
-    max-width: 100%;
+    img {
+        max-width: 100%;
+    }
 }
 .mythemes-copyright {
     background: #000 !important;
@@ -246,6 +246,9 @@ footer img {
 #supporters {
     background: #fff;
     width: 100%;
+    .container {
+        width: 70%;
+    }
 }
 #supporters .container {
     width: 70%;
@@ -304,67 +307,95 @@ header #logo-animation {
     margin-top: 25px;
     background: transparent;
 }
+
+/* Main header bold */
+h1 {
+    font-family: 'gt_walsheimbold';
+    font-size: 58px;
+    line-height: 60px;
+}
+/* Main header thin */
+h2 {
+    font-family: 'gt_walsheimthin';
+    font-size: 58px;
+    line-height: 60px;
+} 
+/* Dates bold */
+h3 { 
+    font-family: 'gt_walsheimbold';
+    font-size: 36px;
+    line-height: 40px;  
+}
+/* Dates thin, highlighted section text */
+h4 { 
+    font-family: 'gt_walsheimthin';
+    font-size: 36px;
+    line-height: 49px;  
+}
+/* Participants names, section descriptions */
+h5 { 
+    font-family: 'gt_walsheimbold';
+    font-size: 24px;
+    line-height: 29px;  
+}
+/* Participants content thin */
+h6 { 
+    font-family: 'gt_walsheimthin';
+    font-size: 24px;
+    line-height: 29px;  
+}
+
 /******************
 SECTIONS
 ******************/
-
-.front-page-section-highlight {
-    padding-top: 50px;
-}
-.front-page-section-highlight p {
-    color: #FFF !important;
-}
-.front-page-section-highlight h1,
-.front-page-section-highlight h2,
-.front-page-section-highlight h3,
-.front-page-section-highlight h4,
-.front-page-section-highlight h5,
-.front-page-section-highlight h6 {
-    color: #FFF !important;
-}
-.front-page-section-highlight h1 {
-    text-align: center;
-}
-.front-page-section-highlight h4 {
-    text-align: center;
-    padding-top: 50px;
-}
 .textwidget {
     width: 65%;
     display: block;
     margin: 0 auto;
+    text-align: center;
+    p {
+        color: #000 !important;
+        text-align: left;
+        line-height: 35px !important;
+        font-weight: 300 !important;
+        b {
+            font-family: 'gt_walsheimbold';
+            font-size: 22px;
+            line-height: 35px;
+        }
+    }
+}
+.textwidget {
+    h1, h2, h3, h4, h5, h6 {
+        color: #4696ff;
+    }
+    h5 {
+        font-size: 16px;
+        margin: 0;
+    }
     padding-top: 100px;
     padding-bottom: 100px;
+}
+.front-page-section-highlight {
+    h1, h2, h3, h4, h5, h6 {
+    color: #FFF !important;
     text-align: center;
-}
-.textwidget p {
-    color: #000 !important;
-    text-align: left;
-    line-height: 35px !important;
-    font-weight: 300 !important;
-}
-.textwidget p b {
-    font-family: 'gt_walsheimbold';
-    font-size: 22px;
-    line-height: 35px;
-}
-.textwidget h1,
-.textwidget h2,
-.textwidget h3,
-.textwidget h4,
-.textwidget h5,
-.textwidget h6 {
-    color: #4696ff;
-}
-.textwidget h5 {
-    font-size: 16px;
-}
-.textwidget h4 {
-    padding-top: 50px; // Needs work
+    }
+    p {
+        text-align: center;
+    }
+    h5 {
+        font-size: 16px;
+        margin: 0;        
+    }
+    hr {
+        border-top: 1px solid #fff !important;
+    }
 }
 .widget-title {
     display: none;
 }
+
 
 /*******************
 PLAYER VISUALISAION
@@ -413,7 +444,6 @@ PLAYER VISUALISAION
     -moz-font-feature-settings: 'tnum';
     -ms-font-feature-settings: 'tnum';
 }
-
 #player .status {
     /* H2 style */
     font-family: 'gt_walsheimbold';
@@ -427,9 +457,6 @@ PLAYER VISUALISAION
     font-family: 'gt_walsheimbold';
     font-size: 24px;
     line-height: 29px;  
-}
-#player #play-icon:hover {
-    cursor: pointer;
 }
 #player .title {
     font-family: 'gt_walsheimthin';
@@ -461,6 +488,9 @@ PLAYER VISUALISAION
 }
 #player i:hover {
     opacity: .8;
+}
+#player #play-icon:hover {
+    cursor: pointer;
 }
 #player {
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
@@ -504,13 +534,6 @@ PLAYER VISUALISAION
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
-audio {
-    display: block;
-    width: 50%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 /*************
 VIDEO MODAL
@@ -589,26 +612,21 @@ PARTICIPANTS
 .participants-list {
     min-height: 500px;
 }
-
-.participants-list p,
-.participants-list h1,
-.participants-list h2,
-.participants-list h3,
-.participants-list h4,
-.participants-list h5,
-.participants-list h6
- {
-    text-align: left;
+.participants-list {
+    p, h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+    }
+    a, a:visited, a:active, a:focus {
+        color: #000;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #969696;
+    }
 }
 .participants-alphabet .textwidget {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-}
-.participants-list a {
-    color: #000;    
-}
-.participants-list a:hover {
-    color: #969696;
 }
 .participants-list .participant-text {
     width: 65%;
@@ -616,10 +634,6 @@ PARTICIPANTS
     margin: 0 auto;
     padding: 40px 0 40px 0;
     cursor: pointer;
-}
-.participants-list a:visited, .participants-list a:active, .participants-list a:focus {
-    color: #000;
-    text-decoration: none;
 }
 .participants-list .participant-content {
     font-family: 'gt_walsheimthin';
@@ -743,10 +757,6 @@ Schedule
 #schedule a {
     color: #FFF;
 }
-
-#schedule hr {
-    border-top: 1px solid #fff !important;
-}
 #schedule .participant-content {
     font-family: 'surveyor_textlight' !important;    
     font-size: 26px;
@@ -758,17 +768,6 @@ Schedule
 #schedule a:hover {
     opacity: .5;
 }
-h5#programme-header {
-    font-size: 16px !important;
-    text-align: center !important;
-}
-h1#programme-header {
-    padding-bottom: 50px;
-}
-hr#programme-header {
-    border-top: 1px solid #fff !important;
-}
-
 .panel-grid-cell .so-panel {
     margin-bottom: 0 !important;
 }

@@ -81,17 +81,12 @@ h1 {
     font-family: 'gt_walsheimbold';
     font-size: 58px;
     line-height: 60px;
-    margin-top: 15px;
-    margin-bottom: 40px;
 }
 /* Main header thin */
 h2 {
     font-family: 'gt_walsheimthin';
     font-size: 58px;
     line-height: 60px;
-    margin-top: 15px;
-    margin-bottom: 40px;
-
 } 
 /* Dates bold */
 h3 { 
