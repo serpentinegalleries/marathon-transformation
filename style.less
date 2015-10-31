@@ -915,32 +915,8 @@ h5#blog-front-page-h {
 }
 
 @media screen and (max-width: 992px) {
-    h1 {
-        font-family: 'gt_walsheimbold';
-        font-size: 36px !important;
-        line-height: 40px !important;
-        margin-bottom: 20px !important;  
-    }
-    h2 {
-        font-family: 'gt_walsheimthin';
-        font-size: 36px !important;
-        line-height: 40px !important;  
-        margin-bottom:40px !important;
-    }
-    h3 {
-        font-size: 24px !important;
-        line-height: 29px !important; 
-    }
-    h4 {
-        font-size: 24px !important;
-        line-height: 29px !important; 
-    }
-    p {
-        font-size: 18px !important;
-        line-height: 20px !important;
-    }
     .participant-text {
-        width: 90% !important;
+        width: 80% !important;
     }
     #close-frame {
         font-size: 40px;
@@ -948,49 +924,87 @@ h5#blog-front-page-h {
 }
 
 @media (max-width: 480px) {
+    .textwidget {
+        width: 80%;
+        padding-top: @section-padding - 40px;
+        padding-bottom: @section-padding - 40px;
+        p {
+            font-size: 18px;
+            line-height: 22px !important;
+            font-weight: 300 !important;
+            b {
+                font-size: 16px;
+                line-height:22px;
+            }
+        }
+        h1, h2 {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        h2 {
+            padding-bottom: 60px;
+        }
+        h4 {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        h5 {
+            font-size: 14px;
+        }
+    }
+    .front-page-section-highlight {
+        h2 {
+            padding-bottom: 60px;
+        }
+        h5 {
+            font-size: 14px;
+        }
+    }
+    .front-page-schedule-highlight {
+        h1 {
+            font-size: 32px;
+            line-height: 36px;
+        }        
+        h5 {
+            font-size: 14px;
+        }
+    }
+    #schedule {
+        h5 {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        p, span {
+            font-size: 18px;
+            line-height: 22px;            
+        }
+    }
+    .participants-list .participant {
+        width: 80%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .participant-hide {
+            padding-top: 0;
+        }
+        i {
+            font-size: 24px;
+        }
+        .participant-body {
+            b, a {
+                font-size: 16px;
+                line-height:22px;
+            }
+        }
+        .participant-content {
+            p, i {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
     nav.base-nav ul.mythemes-menu {
         background: transparent !important;
         border: none !important;
-    }
-    .participant-text h5 {
-        font-size: 24px;
-        line-height: 29px; 
-    }
-    #schedule h5 {
-        font-size: 24px;
-        line-height: 29px; 
-    }
-    .textwidget p {
-        line-height: 24px !important;
-    }
-    .textwidget p b, .textwidget p strong {
-        font-family: 'gt_walsheimbold';
-        font-size: 16px;
-        line-height: 22px;
-    }
-    .textwidget {
-        width: 80%;
-    }
-    #blog p {
-        width: 100%;
-    }
-    h1 {
-        font-family: 'gt_walsheimbold';
-        font-size: 24px !important;
-        line-height: 29px !important; 
-    }
-    h2 {
-        font-family: 'gt_walsheimthin';
-        font-size: 24px !important;
-        line-height: 29px !important; 
-    }
-    h3 {
-        font-size: 24px !important;
-        line-height: 29px !important; 
-    }
-    h4 {
-        font-size: 24px !important;
-        line-height: 29px !important; 
     }
     #logo-animation video {
         display: block;
