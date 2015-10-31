@@ -130,39 +130,41 @@
         </div>
     </div>
 
-    <div class="textwidget blogwidget">
+    <div class="bg-wrapper">
+        <div class="textwidget blogwidget">
 
-        <h5>Transformation Marathon</h5>
-        <h1><a href="/blog">Live Blog</a></h1>
+            <h5>Transformation Marathon</h5>
+            <h1><a href="/blog">Live Blog</a></h1>
 
-        <?php
+            <?php
 
 
-        $args = array( 'posts_per_page' => 1, 'category' => 7 );
+            $args = array( 'posts_per_page' => 1, 'category' => 7 );
 
-        $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-            <article>
-                <div class="header">
-                    <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+            $myposts = get_posts( $args );
+            foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                <article>
+                    <div class="header">
+                        <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-                    <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
+                        <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
 
-                    <h5>by <?php the_author_firstname(); ?> <?php the_author_lastname(); ?> &#8212; <?php the_time('j F Y'); ?></h5>
-                </div>
+                        <h5>by <?php the_author_firstname(); ?> <?php the_author_lastname(); ?> &#8212; <?php the_time('j F Y'); ?></h5>
+                    </div>
 
-                <!-- Display the Post's content in a div box. -->
+                    <!-- Display the Post's content in a div box. -->
 
-                <div class="entry">
-                    <?php the_content(); ?>
-                </div>
+                    <div class="entry">
+                        <?php the_content(); ?>
+                    </div>
 
-                <a href="/blog"><img id="read-more" src="/wp-content/themes/transformation/media/img/icon_readmore.svg"></a>
-            </article>
-        <?php endforeach; 
-        wp_reset_postdata();?>
+                    <a href="/blog"><img id="read-more" src="/wp-content/themes/transformation/media/img/icon_readmore.svg"></a>
+                </article>
+            <?php endforeach; 
+            wp_reset_postdata();?>
 
         </div>
+    </div>
 
 <?php get_footer(); ?>
 
