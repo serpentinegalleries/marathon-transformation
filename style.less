@@ -605,6 +605,7 @@ WEATHER ICONS
     margin-top: 12px !important;
     min-height: 50px;
 }
+
 /*****************
 PARTICIPANTS
 *****************/
@@ -670,29 +671,21 @@ PARTICIPANTS
 .participants-alphabet .textwidget {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-}
-.participants-list .participant-hide h2 {
-    font-size: 64px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-.participant-menu h5 {
-    text-align: center;
-}
-.participant-menu h5 a {
-    color: #000 !important;
-}
-.participant-menu a:active, .participant-menu a:hover {
-    text-decoration: underline;
+    h5 {
+        text-align: center;
+        font-size: 24px;
+        a {
+            color: #000 !important;
+        }
+    }
+    a:active, a:hover {
+        text-decoration: underline;
+    }
 }
 a.participant-title {
     display: block;
     position: relative;
     top: -60px !important;
-}
-#participants-a-i {
-    cursor: pointer;
 }
 #participants-j-s {
     display: none;    
@@ -702,20 +695,8 @@ a.participant-title {
     display: none;
     cursor: pointer;
 }
-#participants-all {
+#participants-all, #participants-a-i, #participants-a-i-link, #participants-j-s-link, #participants-t-z-link {
     cursor: pointer;
-}
-#participants-a-i-link {
-    cursor: pointer;
-}
-#participants-j-s-link {
-    cursor: pointer;
-}
-#participants-t-z-link {
-    cursor: pointer;
-}
-.participants-links h5 {
-    font-size: 24px;
 }
 .participants-active {
     text-decoration: underline;
@@ -726,6 +707,7 @@ a.participant-title {
 .participant-up {
     display: none;
 }
+
 /**************
 Schedule
 **************/
