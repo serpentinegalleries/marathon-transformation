@@ -19,6 +19,12 @@
 
 */
 
+/****************
+VARIABLES
+****************/
+@base:            #f938ab;
+@section-padding:   100px;
+
 
 /****************
 TYPOGRAPHY
@@ -353,6 +359,8 @@ SECTIONS
     display: block;
     margin: 0 auto;
     text-align: center;
+    padding-top: @section-padding;
+    padding-bottom: @section-padding;
     p {
         color: #000 !important;
         text-align: left;
@@ -364,25 +372,27 @@ SECTIONS
             line-height: 35px;
         }
     }
-}
-.textwidget {
     h1, h2, h3, h4, h5, h6 {
         color: #4696ff;
+    }
+    h2 {
+        padding-bottom: @section-padding;
     }
     h5 {
         font-size: 16px;
         margin: 0;
     }
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 .front-page-section-highlight {
     h1, h2, h3, h4, h5, h6 {
-    color: #FFF !important;
-    text-align: center;
+        color: #FFF !important;
+        text-align: center;
     }
     p {
         text-align: center;
+    }
+    h1 {
+        padding-bottom: @section-padding;
     }
     h5 {
         font-size: 16px;
@@ -711,36 +721,47 @@ a.participant-title {
 /**************
 Schedule
 **************/
-
+.front-page-schedule-highlight {
+    padding-top: @section-padding;
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFF !important;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    h1 {
+        margin-bottom: @section-padding;
+    }
+    h5 {
+        font-size: 16px;
+        margin: 0;        
+    }
+    hr {
+        border-top: 1px solid #fff !important;
+    }
+}
 #schedule {
     color: #FFF;
-}
-
-#schedule h1 {
-    text-align: center !important;
-    margin-top: 0 !important;
-}
-#schedule h5 {
-    font-family: 'gt_walsheimbold';
-    font-size: 36px;
-    line-height: 40px;
-}
-#schedule b, #schedule strong {
-    font-family: 'gt_walsheimbold';
-}
-#schedule a {
-    color: #FFF;
-}
-#schedule .participant-content {
-    font-family: 'surveyor_textlight' !important;    
-    font-size: 26px;
-}
-#schedule .participant-content span {
-    font-family: 'surveyor_textlight' !important;    
-    font-size: 26px;
-}
-#schedule a:hover {
-    opacity: .5;
+    a, p, span {
+        color: #FFF;
+        text-align: left;
+    }
+    a:hover {
+        opacity: .5;
+    }
+    b, strong {
+        font-family: 'gt_walsheimbold';
+    }
+    .participant-content {
+        font-family: 'surveyor_textlight' !important;    
+        font-size: 26px;
+    }
+    h5 {
+        font-size: 36px;
+        line-height: 40px;
+        text-align: left;
+    }
 }
 .panel-grid-cell .so-panel {
     margin-bottom: 0 !important;
