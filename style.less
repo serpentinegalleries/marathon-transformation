@@ -396,6 +396,12 @@ SECTIONS
     h1, h2, h3, h4, h5, h6 {
         color: #4696ff;
     }
+    h1 a {
+        color: #4696ff;
+    }
+    h1 a:hover {
+        opacity: .5;
+    }
     h2 {
         padding-bottom: @section-padding;
     }
@@ -860,9 +866,41 @@ BLOG
 #blog a:hover {
     color: #969696;
 }
-#blog .header-block {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.blogwidget {
+    background: #eee;
+    p {
+        color: #000 !important;
+        text-align: left;
+        line-height: 35px !important;
+        font-weight: 300 !important;
+        a {
+            font-family: 'gt_walsheimbold';
+            color: #000;
+            font-size: 22px;
+            line-height: 35px;
+        }
+        a:hover {
+            color: #969696;
+        }
+    }    
+}
+.blogwidget .header {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    a {
+        color: #000;
+    }
+    a:hover {
+        color: #969696;
+    }
+    h3, h5 {
+        color: #000;
+    }
+    img, iframe {
+        display: block;
+        margin: 50px auto;
+        max-width: 100%;
+    }
 }
 #blog h5 {
     padding-top: 25px;
@@ -957,6 +995,22 @@ h5#blog-front-page-h {
 }
 
 @media (max-width: 480px) {
+    .blogwidget {
+        .header {
+            h3 {
+                font-size: 24px;
+            }
+            h5 {
+                font-size: 14px;
+            }
+        }
+        p {
+            a {
+                font-size: 16px;
+                line-height:22px;
+            }        
+        }
+    }
     .textwidget {
         width: 80%;
         padding-top: @section-padding - 40px;
@@ -984,6 +1038,10 @@ h5#blog-front-page-h {
         h5 {
             font-size: 14px;
         }
+    }
+    .blogwidget .header {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     .front-page-section-highlight {
         h2 {
@@ -1059,14 +1117,17 @@ h5#blog-front-page-h {
         margin: 0 auto;
     }
     #blog img {
-        max-width: 100%;
+        max-width: 80%;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
     #blog iframe {
-        max-width: 100%;
+        max-width: 80%;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+    .entry img {
+        max-width: 100% !important;
     }
 }
 
