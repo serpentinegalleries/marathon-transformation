@@ -200,6 +200,11 @@ function setWindIconBlack(wind_direction) {
 		$('footer #logo-animation').prepend('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo_black.svg');
 	}
 
+	if ($(window).width() < 1200) {
+		$("#social-icons").removeClass("pull-right");
+		$("#serpentine-marathon").removeClass("pull-right");
+	}
+
 	$('a#participants-a-i-link').on('click', function () {
 		$('a.participants-active').removeClass("participants-active");
 		$(this).attr("class", "participants-active");

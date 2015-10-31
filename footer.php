@@ -5,203 +5,56 @@
         </div>
 
         <footer>
-            <?php
-                ob_start();
-                get_sidebar( 'footer-first' );
-                $first = ob_get_clean();
-
-                ob_start();
-                get_sidebar( 'footer-second' );
-                $second = ob_get_clean();
-
-                ob_start();
-                get_sidebar( 'footer-third' );
-                $third = ob_get_clean();
-
-                $sidebar_content = $first . $second . $third;
-                
-
-                if( !empty( $sidebar_content ) ){
-            ?>
-                    <aside>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 footer-sidebar-1">
-                                    <?php echo $first; ?>
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 footer-sidebar-2">
-                                    <?php echo $second; ?>
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 footer-sidebar-3">
-                                    <?php echo $third; ?>
-                                </div>
-                            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-sm-12">
+                        <div id="logo-animation">
+                            <video width="378" height="auto" autoplay loop>
+                              <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.mp4" type="video/mp4">
+                              <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.ogg" type="video/ogg">
+                              <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.webm" type="video/webm">
+                              <img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
+                            </video>
                         </div>
-                    </aside>
-            <?php
-                }
-            ?>
-
-            <div class="mythemes-copyright">
-                <div class="container">
-                    <div id="logo-animation" class="row">
-                        <video width="378" height="auto" autoplay loop>
-                          <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.mp4" type="video/mp4">
-                          <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.ogg" type="video/ogg">
-                          <source src="/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.webm" type="video/webm">
-                          <img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
-                        </video>
                     </div>
-                    <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-sm-12">
+                        <div id="social-icons" class="pull-right">
+                            <p>
+                                Connect with Serpentine Galleries
+                            </p>
+                            <p>
+                                <a href="http://facebook.com/SerpentineGalleries" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="http://twitter.com/SerpentineUK" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="http://instagram.com/serpentineuk" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="http://www.youtube.com/user/theserpentinegallery" target="_blank"><i class="fa fa-youtube"></i></a>
+                                <a href="http://github.com/serpentinegalleries" target="_blank"><i class="fa fa-github"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        <p>
+                            <b>17 October</b><br>
+                            <b>Serpentine Sackler Gallery</b><br>
+                            West Carriage Drive<br>
+                            Kensington Gardens<br>
+                            London W2 2AR
+                        </p>  
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        <p>
+                            <b>18 October</b><br>
+                            <b>Serpentine Radio</b><br><br><br>
+                            <a href="/">radio.serpentinegalleries.org</a>
+                        </p> 
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <a href="http://serpentinegalleries.org/" target="_blank">
-                        <img class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
+                        <img id="serpentine-marathon" class="pull-right" src="/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
                         </a>    
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                        </div>
-                        <?php
-                            $github     = myThemes::get( 'github' );
-                            $vimeo      = myThemes::get( 'vimeo' );
-                            $twitter    = myThemes::get( 'twitter' );
-                            $renren     = myThemes::get( 'renren' );
-                            $skype      = myThemes::get( 'skype' );
-                            $linkedin   = myThemes::get( 'linkedin' );
-                            $behance    = myThemes::get( 'behance' );
-                            $dropbox    = myThemes::get( 'dropbox' );
-                            $flickr     = myThemes::get( 'flickr' );
-                            $tumblr     = myThemes::get( 'tumblr' );
-                            $instagram  = myThemes::get( 'instagram' );
-                            $vkontakte  = myThemes::get( 'vkontakte' );
-                            $facebook   = myThemes::get( 'facebook' );
-                            $evernote   = myThemes::get( 'evernote' );
-                            $flattr     = myThemes::get( 'flattr' );
-                            $picasa     = myThemes::get( 'picasa' );
-                            $dribbble   = myThemes::get( 'dribbble' );
-                            $soundcloud = myThemes::get( 'soundcloud' );
-                            $mixi       = myThemes::get( 'mixi' );
-                            $stumbl     = myThemes::get( 'stumbl' );
-                            $lastfm     = myThemes::get( 'lastfm' );
-                            $gplus      = myThemes::get( 'gplus' );
-                            $pinterest  = myThemes::get( 'pinterest' );
-                            $smashing   = myThemes::get( 'smashing' );
-                            $rdio       = myThemes::get( 'rdio' );
-                            $rss        = myThemes::get( 'rss' );
-                        ?>
-                        <!--<div class="col-sm-6 col-md-6 col-lg-6">-->
-                            <div class="mythemes-social pull-right">
-                                <?php
-                                    if( !empty( $github ) ){
-                                        echo '<a href="' . $github . '" class="icon-github" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $vimeo ) ){
-                                        echo '<a href="' . $vimeo . '" class="icon-vimeo" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $twitter ) ){
-                                        echo '<a href="' . $twitter . '" class="icon-twitter" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $renren ) ){
-                                        echo '<a href="' . $renren . '" class="icon-renren" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $skype ) ){
-                                        echo '<a href="' . $skype . '" class="icon-skype" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $linkedin ) ){
-                                        echo '<a href="' . $linkedin . '" class="icon-linkedin" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $behance ) ){
-                                        echo '<a href="' . $behance . '" class="icon-behance" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $dropbox ) ){
-                                        echo '<a href="' . $dropbox . '" class="icon-dropbox" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $flickr ) ){
-                                        echo '<a href="' . $flickr . '" class="icon-flickr" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $tumblr ) ){
-                                        echo '<a href="' . $tumblr . '" class="icon-tumblr" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $instagram ) ){
-                                        echo '<a href="' . $instagram . '" class="icon-instagram" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $vkontakte ) ){
-                                        echo '<a href="' . $vkontakte . '" class="icon-vkontakte" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $facebook ) ){
-                                        echo '<a href="' . $facebook . '" class="icon-facebook" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $evernote ) ){
-                                        echo '<a href="' . $evernote . '" class="icon-evernote" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $flattr ) ){
-                                        echo '<a href="' . $flattr . '" class="icon-flattr" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $picasa ) ){
-                                        echo '<a href="' . $picasa . '" class="icon-picasa" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $dribbble ) ){
-                                        echo '<a href="' . $dribbble . '" class="icon-dribbble" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $soundcloud ) ){
-                                        echo '<a href="' . $soundcloud . '" class="icon-soundcloud" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $mixi ) ){
-                                        echo '<a href="' . $mixi . '" class="icon-mixi" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $stumbl ) ){
-                                        echo '<a href="' . $stumbl . '" class="icon-stumbl" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $lastfm ) ){
-                                        echo '<a href="' . $lastfm . '" class="icon-lastfm" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $gplus ) ){
-                                        echo '<a href="' . $gplus . '" class="icon-gplus" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $pinterest ) ){
-                                        echo '<a href="' . $pinterest . '" class="icon-pinterest" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $smashing ) ){
-                                        echo '<a href="' . $smashing . '" class="icon-smashing" target="_blank"></a>';
-                                    }
-
-                                    if( !empty( $rdio ) ){
-                                        echo '<a href="' . $rdio . '" class="icon-rdio" target="_blank"></a>';
-                                    }
-
-                                    if( $rss ){
-                                        echo '<a href="'; bloginfo('rss2_url');  echo '" class="icon-rss" target="_blank"></a>';
-                                    }
-                                ?>
-                            </div>
-                        <!--</div>-->
-
-                    </div>
-                    <div class="row">
-                    </div>  
-                </div>
+                </div> 
             </div>
 
         </footer>

@@ -224,14 +224,6 @@ nav.mythemes-nav-inline.base-nav {
 FOOTER
 ******************/
 
-footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
-    background: transparent !important;
-    color: #FFF !important;
-}
-.mythemes-social {
-    display: block !important;
-    margin-top: 25px !important;
-}
 .tm-logo {
     width: 338px;
     max-width: 100%;
@@ -239,16 +231,41 @@ footer div.mythemes-social a:hover:before, footer div.mythemes-social a:before {
 }
 footer {
     background: #000;
-    padding: 40px 50px 40px 50px !important;
+    .container {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    p, a, b, i {
+        color: #FFF !important;
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    b {
+        font-family: 'gt_walsheimbold';
+        font-size: 16px;
+        line-height: 22px;
+    }
+    a:hover i {
+        color: #969696;
+    }
     img {
         max-width: 100%;
     }
+    .row {
+        padding: 100px 0;
+    }
+    #social-icons {
+        padding-top: 34px;
+        i {
+            text-align: center;
+            padding: 15px;
+        }
+    }
 }
-.mythemes-copyright {
-    background: #000 !important;
-    padding: 0 !important;
-}
-// Supporters block
+
 #supporters {
     background: #fff;
     width: 100%;
@@ -308,6 +325,9 @@ h1,h2,h3,h4,h5,h6,p,a,em,b,strong,span {
 }
 #logo-animation video {
     max-width: 100%;
+}
+footer #logo-animation {
+    margin-left: -27px;
 }
 header #logo-animation {
     margin-top: 25px;
@@ -911,6 +931,15 @@ h5#blog-front-page-h {
     }
     #player i {
         display: none;
+    }
+    footer {
+        padding: 60px 0;
+        .row {
+            padding: 0;
+        }
+        .col-md-12, .col-sm-12, .col-xs-12 {
+            padding: 20px 0;
+        }
     }
 }
 
