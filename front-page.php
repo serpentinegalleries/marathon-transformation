@@ -134,8 +134,8 @@
             <div class="container">
                 <div class="row">
 
-                    <h5 id="blog-front-page-h">Transformation Marathon</h5>
-                    <h1 id="blog-front-page-h"><a href="/blog">Live Blog</a></h1>
+                    <h5>Transformation Marathon</h5>
+                    <h1><a href="/blog">Live Blog</a></h1>
 
                     <?php
 

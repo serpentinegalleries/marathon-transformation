@@ -611,8 +611,6 @@ PARTICIPANTS
 
 .participants-list {
     min-height: 500px;
-}
-.participants-list {
     p, h1, h2, h3, h4, h5, h6 {
         text-align: left;
     }
@@ -623,58 +621,61 @@ PARTICIPANTS
     a:hover {
         color: #969696;
     }
+    .participant {
+        width: 65%;
+        display: block;
+        margin: 0 auto;
+        padding: 60px 0 60px 0;
+        cursor: pointer;
+        .participant-body {
+            margin-top: 50px;
+            display: none;
+        }
+        .participant-hide {
+            text-align: center;
+            padding-top: 15px;
+        }
+        .share {
+            text-align: center;
+            a {
+                color: #969696;
+            }
+            p {
+                text-align: center;
+                margin-top: 25px;
+                font-size: 18px;
+                line-height: 27px;
+            }
+        }
+        .participant-content {
+            font-family: 'gt_walsheimthin';
+            font-size: 18px;
+            line-height: 27px;
+            a {
+                font-family: 'gt_walsheimbold';
+            }
+            .participant-media {
+                padding-top: 50px;
+                a {
+                    color: #4696ff;
+                    &:hover {
+                        color: #4696ff;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
 }
 .participants-alphabet .textwidget {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
-}
-.participants-list .participant-text {
-    width: 65%;
-    display: block;
-    margin: 0 auto;
-    padding: 40px 0 40px 0;
-    cursor: pointer;
-}
-.participants-list .participant-content {
-    font-family: 'gt_walsheimthin';
-    font-size: 18px;
-    line-height: 27px;
-}
-.participants-list .participant-content a {
-    font-family: 'gt_walsheimbold';
-}
-.participants-list .participant-media a {
-    color: #4696ff;
-}
-.participants-list .participant-media a:hover {
-    color: #4696ff;
-    opacity: .5;
-}
-.participants-list .share, .participants-list .participant-hide {
-    text-align: center;
-    padding-top: 15px;
-}
-.participants-list .share a {
-    color: #969696;
-}
-.participants-list .share p {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 18px;
-    line-height: 27px;
-}
-.participants-list .participant-body {
-    margin-top: 25px;
-    display: none;
 }
 .participants-list .participant-hide h2 {
     font-size: 64px;
     text-align: center;
     margin: 0;
     padding: 0;
-}
-.participants-list .participant-hide:hover {
-    cursor: pointer;
 }
 .participant-menu h5 {
     text-align: center;
@@ -685,16 +686,10 @@ PARTICIPANTS
 .participant-menu a:active, .participant-menu a:hover {
     text-decoration: underline;
 }
-.participant-url a {
+a.participant-title {
+    display: block;
     position: relative;
-    padding-top: 50px;
-    margin-top: -50px;
-        display: block;
-    height: 0;
-    width:0;
-}
-.participant-title {
-    cursor: pointer;
+    top: -60px !important;
 }
 #participants-a-i {
     cursor: pointer;
@@ -727,9 +722,6 @@ PARTICIPANTS
 }
 .participants-inactive {
     text-decoration: none;
-}
-.participant-media {
-    padding-top: 50px;
 }
 .participant-up {
     display: none;

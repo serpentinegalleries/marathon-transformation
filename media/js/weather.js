@@ -134,7 +134,7 @@ function setWindIconBlack(wind_direction) {
 	PARTICIPANTS
 	*********************/
 
-	$('.participant-text').on('click', function () {
+	$('.participant').on('click', function () {
 
 		$participant = $(this);
 
@@ -181,7 +181,7 @@ function setWindIconBlack(wind_direction) {
 			{
 				var $participantId = $(window.location.hash);
 				$participantId.closest('.participants-list').show();
-				$participantId.closest('.participant-text').find('.participant-body').show(700);
+				$participantId.closest('.participant').find('.participant-body').slideToggle(400);
 			}
 	});	
 
@@ -190,7 +190,7 @@ function setWindIconBlack(wind_direction) {
 			{
 				var $participantId = $(window.location.hash);
 				$participantId.closest('.participants-list').show();
-				$participantId.closest('.participant-text').find('.participant-body').show(700);
+				$participantId.closest('.participant').find('.participant-body').slideToggle(400);
 			}
 	});
 
