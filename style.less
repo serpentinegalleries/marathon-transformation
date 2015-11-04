@@ -944,8 +944,14 @@ MOBILE STYLES
             padding: 20px 0;
         }
     }
+    .share-text {
+        display: none;
+    }
+    .participants-list .participant .share p {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
 }
-
 @media screen and (max-width: 992px) {
     .textwidget {
         width: 80%;
@@ -1044,7 +1050,11 @@ MOBILE STYLES
             line-height: 22px;            
         }
         .participant-hide {
-            padding-top: 0;
+            padding-top: 3px;
+            i {
+                font-size: 24px;
+                -webkit-text-stroke: 3px #4696ff;
+            }
         }
     }
     .participants-alphabet {
@@ -1059,7 +1069,11 @@ MOBILE STYLES
             top: -30px;
         }
         .participant-hide {
-            padding-top: 10px;
+            padding-top: 15px;
+            i {
+                font-size: 24px;
+                -webkit-text-stroke: 3px #eee;
+            }
         }
         i {
             font-size: 24px;
@@ -1080,6 +1094,9 @@ MOBILE STYLES
             iframe {
                 width: 100%;
             }
+        }
+        .share-text {
+            display: none;
         }
     }
     nav.base-nav ul.mythemes-menu {
