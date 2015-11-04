@@ -196,8 +196,13 @@ function setWindIconBlack(wind_direction) {
 
 	if ($(window).width() < 540) {
 		$('img#supporter-block').attr('src', "/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
-		$('footer #logo-animation').html('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg');
-		$('footer #logo-animation').prepend('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo_black.svg');
+	}
+
+	/* Logo Animation: If mobile, set logo to static image rather than video */
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('#logo-animation').html('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo_black.svg">');
+		$('footer #logo-animation').html('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg">');
+		$('footer #logo-animation').css("margin-left", 0)
 	}
 
 	if ($(window).width() < 1200) {
