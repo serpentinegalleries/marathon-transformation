@@ -373,6 +373,7 @@ h6 {
     line-height: 29px;  
 }
 
+
 /******************
 SECTIONS
 ******************/
@@ -600,7 +601,7 @@ VIDEO MODAL
     height: 100%;
     padding: 0;
 }
-#livestream img {
+/*#livestream img {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -616,6 +617,58 @@ VIDEO MODAL
 }
 #livestream img {
     max-width: 80%;
+}*/
+#livestream-overlay {
+    position: absolute;
+    z-index: 5000000;
+    width: 100%;
+    .tm-logo {
+        margin-top: 0;
+    }
+    .row {
+        display: block;
+        margin: 25px auto;
+        width: 80%;        
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.close-modal {
+    position: relative;
+    width:75px;
+    height:75px;
+    background-color:transparent;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.3;
+    }
+    .lr {
+        height:60px;
+        width:1px;
+        margin-left:35px;
+        background-color: #FFF;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        /* IE 9 */
+        -webkit-transform: rotate(45deg);
+        /* Safari and Chrome */
+        z-index:1051;
+        .rl {
+            height:60px;
+            width:1px;
+            background-color: #FFF;
+            transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            /* IE 9 */
+            -webkit-transform: rotate(90deg);
+            /* Safari and Chrome */
+            z-index:1052;
+        }
+    }
 }
 #youtube {
     width: 100%;
@@ -807,7 +860,7 @@ Schedule
     }
 }
 .panel-grid-cell .so-panel {
-    margin-bottom: 0 !important;
+    margin-bottom: -2px !important;
 }
 
 /**************
@@ -963,7 +1016,32 @@ MOBILE STYLES
         font-size: 40px;
     }
 }
-
+@media (max-width: 600px) {
+    #logo-animation video {
+        display: block;
+        margin: 0 auto;
+    }
+    .participant-media {
+        iframe {
+            width: 100%;
+        }
+    }
+    .close-modal {
+        width:40px;
+        height:40px;
+        .lr {
+            height:40px;
+            .rl {
+                height:40px;
+            }
+        }
+    }
+    #livestream-overlay {
+        img {
+            display: none;
+        }
+    }
+}
 @media (max-width: 480px) {
     .blogwidget {
         .header {
@@ -1107,16 +1185,17 @@ MOBILE STYLES
         display: block;
         margin: 0 auto;
     }
-}
-
-@media (max-width: 600px) {
-    #logo-animation video {
-        display: block;
-        margin: 0 auto;
-    }
-    .participant-media {
-        iframe {
-            width: 100%;
+    #livestream-overlay {
+        position: absolute;
+        z-index: 5000000;
+        width: 100%;
+        .row {
+            display: block;
+            margin: 10px auto;
+            width: 90%;        
+        }
+        img {
+            max-width: 100%;
         }
     }
 }
