@@ -422,17 +422,17 @@ ALTERNATE TEXT
 
 	function arcTween(transition, newAngle) {
 
-	transition.attrTween("d", function(d) {
+		transition.attrTween("d", function(d) {
 
-	  var interpolate = d3.interpolate(d.endAngle, newAngle);
+		  var interpolate = d3.interpolate(d.endAngle, newAngle);
 
-	  return function(t) {
+		  return function(t) {
 
-	    d.endAngle = interpolate(t);
+		    d.endAngle = interpolate(t);
 
-	    return arc(d);
-	  };
-	});
+		    return arc(d);
+		  };
+		});
 	}
 
 	$(window).on('load', function(e){
