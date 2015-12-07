@@ -458,7 +458,8 @@ jQuery(document).ready(function( $ ) {
 							audioSrc.src = "http://www.serpentinegalleries.org/audio/" + radioObjs[i] + "-serpentine-radio-segments.mp3";
 							if (stream.paused) {
 								stream.play();
-								radioplayButton.text(function(d) { return '\uf04c' })
+								radioplayButton.text(function(d) { return '\uf04c' });
+								ga('send', 'event', 'Videos', 'play', 'Radio Archive');
 							} else { 
 								stream.pause();
 								radioplayButton.text(function(d) { return '\uf04b' })
@@ -482,6 +483,7 @@ jQuery(document).ready(function( $ ) {
 							audioSrc.src = "http://www.serpentinegalleries.org/audio/" + radioObjs[i] + "-serpentine-radio-segments.mp3";
 							if (stream.paused) {
 								stream.play();
+								ga('send', 'event', 'Videos', 'play', 'Radio Archive');
 								radioplayButton.text(function(d) { return '\uf04c' })
 							} else { 
 								stream.pause();
