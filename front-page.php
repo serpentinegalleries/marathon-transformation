@@ -125,7 +125,6 @@
                     get_template_part( 'cfg/templates/loop' );
                 }
             ?>
-
             </div>
         </div>
     </div>
@@ -139,13 +138,14 @@
             <?php
 
 
-            $args = array( 'posts_per_page' => 1, 'category' => 7 );
+            $args = array( 'posts_per_page' => 1, 'category' => 2 );
 
             $myposts = get_posts( $args );
             foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
                 <article>
                     <div class="header">
                         <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
 
                         <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
 

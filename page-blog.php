@@ -4,7 +4,7 @@
     <?php get_header(); ?>
 
                         <?php
-                        query_posts('cat=7&showposts=5&paged='.get_query_var('paged'));
+                        query_posts('cat=2&showposts=5&paged='.get_query_var('paged'));
                         while (have_posts()) : the_post();
                         ?>
                         <div class="textwidget blogwidget">
