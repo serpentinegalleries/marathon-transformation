@@ -23,80 +23,80 @@ jQuery(document).ready(function( $ ) {
 	})
 
 	function setIcon(icon) {
-		$("#icon-weather").attr("src", "/wp-content/themes/transformation/media/img/weather/white/" + icon + ".svg");
+		$("#icon-weather").attr("src", "/transformation/wp-content/themes/transformation/media/img/weather/white/" + icon + ".svg");
 	}
 
 
 	function setIconBlack(icon) {
-		$("#icon-weather-black").attr("src", "/wp-content/themes/transformation/media/img/weather/black/" + icon + ".svg");
+		$("#icon-weather-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/weather/black/" + icon + ".svg");
 	}
 
 	function setWindIcon(wind_direction) {
 	    if (wind_direction > 337.5 || wind_direction <= 22.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/n.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/n.svg");
 	        windDirection = 'North';
 	    }
 	    else if (22.5 < wind_direction && wind_direction <= 67.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/ne.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/ne.svg");
 	        windDirection = 'Northeast';
 		}
 	    else if (67.5 < wind_direction && wind_direction <= 112.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/e.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/e.svg");
 	        windDirection = 'East';
 		}
 	    else if (112.5 < wind_direction && wind_direction <= 157.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/se.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/se.svg");
 			        windDirection = 'Southeast';
 		}
 	    else if (157.5 < wind_direction && wind_direction <= 202.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/s.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/s.svg");
 	        windDirection = 'South';
 		}
 	    else if (202.5 < wind_direction && wind_direction <= 247.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/sw.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/sw.svg");
 	        windDirection = 'Southwest';
 		}
 	    else if (247.5 < wind_direction && wind_direction <= 292.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/w.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/w.svg");
 	        windDirection = 'West';
 		}
 	    else if (292.5 < wind_direction && wind_direction <= 337.5) {
-	        $("#icon-wind").attr("src", "/wp-content/themes/transformation/media/img/wind/white/nw.svg");
+	        $("#icon-wind").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/white/nw.svg");
 	        windDirection = 'Northwest';
 		}
 	}
 
 function setWindIconBlack(wind_direction) {
 	    if (wind_direction > 337.5 || wind_direction <= 22.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/n.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/n.svg");
 	        windDirection = 'North';
 	    }
 	    else if (22.5 < wind_direction && wind_direction <= 67.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/ne.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/ne.svg");
 	        windDirection = 'Northeast';
 		}
 	    else if (67.5 < wind_direction && wind_direction <= 112.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/e.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/e.svg");
 	        windDirection = 'East';
 		}
 	    else if (112.5 < wind_direction && wind_direction <= 157.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/se.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/se.svg");
 			        windDirection = 'Southeast';
 		}
 	    else if (157.5 < wind_direction && wind_direction <= 202.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/s.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/s.svg");
 	        windDirection = 'South';
 		}
 	    else if (202.5 < wind_direction && wind_direction <= 247.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/sw.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/sw.svg");
 	        windDirection = 'Southwest';
 		}
 	    else if (247.5 < wind_direction && wind_direction <= 292.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/w.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/w.svg");
 	        windDirection = 'West';
 		}
 	    else if (292.5 < wind_direction && wind_direction <= 337.5) {
-	        $("#icon-wind-black").attr("src", "/wp-content/themes/transformation/media/img/wind/black/nw.svg");
+	        $("#icon-wind-black").attr("src", "/transformation/wp-content/themes/transformation/media/img/wind/black/nw.svg");
 	        windDirection = 'Northwest';
 		}
 	}
@@ -170,13 +170,13 @@ function setWindIconBlack(wind_direction) {
 	});
 
 	if ($(window).width() < 540) {
-		$('img#supporter-block').attr('src', "/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
+		$('img#supporter-block').attr('src', "/transformation/wp-content/themes/transformation/media/img/marathon_supporters_mobile.svg");
 	}
 
 	/* Logo Animation: If mobile, set logo to static image rather than video */
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		$('#logo-animation').html('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo_black.svg">');
-		$('footer #logo-animation').html('<img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg">');
+		$('#logo-animation').html('<img class="tm-logo" src="/transformation/wp-content/themes/transformation/media/img/logo_black.svg">');
+		$('footer #logo-animation').html('<img class="tm-logo" src="/transformation/wp-content/themes/transformation/media/img/logo.svg">');
 		$('footer #logo-animation').css("margin-left", 0)
 	}
 

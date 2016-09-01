@@ -158,7 +158,7 @@
                         <?php the_content(); ?>
                     </div>
 
-                    <a href="/blog"><img id="read-more" src="/wp-content/themes/transformation/media/img/icon_readmore.svg"></a>
+                    <a href="/blog"><img id="read-more" src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/icon_readmore.svg"></a>
                 </article>
             <?php endforeach; 
             wp_reset_postdata();?>
@@ -174,7 +174,7 @@
     <div class="modal-content">
         <div id="livestream-overlay" class="container">
             <div class="row">
-                <img class="tm-logo" src="/wp-content/themes/transformation/media/img/logo.svg">
+                <img class="tm-logo" src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/logo.svg">
                 <div id="close-frame" class="close close-modal" data-dismiss="modal" aria-label="Close">
                     <div class="lr">
                         <div class="rl">
