@@ -1,6 +1,6 @@
         <div id="supporters">
             <div class="container">  
-                <img id="supporter-block" src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/supporters_white.svg">
+                <img id="supporter-block" src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/img/supporters_white.svg">
             </div>
         </div>
 
@@ -10,10 +10,10 @@
                     <div class="col-lg-8 col-md-12 col-sm-12 col-sm-12">
                         <div id="logo-animation">
                             <video width="378" height="auto" autoplay loop>
-                              <source src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.mp4" type="video/mp4">
-                              <source src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.ogg" type="video/ogg">
-                              <source src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.webm" type="video/webm">
-                              <img class="tm-logo" src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/logo.svg">
+                              <source src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.mp4" type="video/mp4">
+                              <source src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.ogg" type="video/ogg">
+                              <source src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/img/animation/Transformation-Marathon-BLACK-BG-600x150P.webm" type="video/webm">
+                              <img class="tm-logo" src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/img/logo.svg">
                             </video>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <a href="http://serpentinegalleries.org/" target="_blank">
-                        <img id="serpentine-marathon" class="pull-right" src="<?php get_site_url() ?>/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
+                        <img id="serpentine-marathon" class="pull-right" src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/img/serpentine_marathon.svg">
                         </a>    
                     </div>
                 </div> 
@@ -61,9 +61,9 @@
 
         <?php wp_footer(); ?>
 
-        <script src="<?php get_site_url() ?>/wp-content/themes/transformation/media/js/weather.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/js/weather.js"></script>
         <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.2"></script>
-        <script src="<?php get_site_url() ?>/wp-content/themes/transformation/media/js/player.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/transformation/media/js/player.js"></script>
 
     </body>
 </html>
