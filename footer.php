@@ -46,7 +46,7 @@
                         <p>
                             <b>18 October</b><br>
                             <b>Serpentine Radio</b><br><br><br>
-                            <a href="/">radio.serpentinegalleries.org</a>
+                            <a href="/transformation">radio.serpentinegalleries.org/transformation</a>
                         </p> 
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">

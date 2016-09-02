@@ -133,7 +133,7 @@
         <div class="textwidget blogwidget">
 
             <h5>Transformation Marathon</h5>
-            <h1><a href="/blog">Live Blog</a></h1>
+            <h1><a href="/transformation/blog">Live Blog</a></h1>
 
             <?php
 
